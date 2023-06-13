@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\auth\LoginController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,6 +13,16 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+
+Route::get('/login', [LoginController::class, 'loginView'])->name('login');
+Route::post('/login', [LoginController::class, 'loginProcess']);
+Route::get('/logout', [LoginController::class, 'logOut']);
+
+Route::middleware('auth')->prefix('admin')->group(function () {
+    include "_/admin/dashboard.php";
+    include "_/sensor/humadity.php";
+});
 
 Route::get('/', function () {
     return view('welcome');

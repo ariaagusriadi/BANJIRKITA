@@ -27,7 +27,7 @@
                 <!-- Dashboard -->
                 <!-- =================== -->
                 <li class="sidebar-item">
-                    <a class="sidebar-link" href="index.html" aria-expanded="false">
+                    <a class="sidebar-link" href="{{ url('admin/dashboard') }}" aria-expanded="false">
                         <span>
                             <i class="ti ti-home-infinity"></i>
                         </span>
@@ -71,23 +71,31 @@
                         <span class="d-flex">
                             <i class="ti ti-chart-donut-3"></i>
                         </span>
-                        <span class="hide-menu">Data</span>
+                        <span class="hide-menu">Sensor</span>
                     </a>
                     <ul aria-expanded="false" class="collapse first-level">
                         <li class="sidebar-item">
-                            <a href="blog-posts.html" class="sidebar-link">
+                            <a href="{{ url('admin/humadity') }}" class="sidebar-link">
                                 <div class="round-16 d-flex align-items-center justify-content-center">
-                                    <i class="ti ti-circle"></i>
+                                    <i class="ti ti-haze"></i>
                                 </div>
-                                <span class="hide-menu">Posts</span>
+                                <span class="hide-menu">Humadity</span>
                             </a>
                         </li>
                         <li class="sidebar-item">
                             <a href="blog-detail.html" class="sidebar-link">
                                 <div class="round-16 d-flex align-items-center justify-content-center">
-                                    <i class="ti ti-circle"></i>
+                                    <i class="ti ti-thermometer"></i>
                                 </div>
-                                <span class="hide-menu">Details</span>
+                                <span class="hide-menu">Temperature</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="blog-posts.html" class="sidebar-link">
+                                <div class="round-16 d-flex align-items-center justify-content-center">
+                                    <i class="ti ti-ripple"></i>
+                                </div>
+                                <span class="hide-menu">Water Level</span>
                             </a>
                         </li>
                     </ul>
