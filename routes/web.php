@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/', fn () => redirect('/login'));
 
 Route::get('/login', [LoginController::class, 'loginView'])->name('login');
 Route::post('/login', [LoginController::class, 'loginProcess']);
@@ -22,8 +23,10 @@ Route::get('/logout', [LoginController::class, 'logOut']);
 Route::middleware('auth')->prefix('admin')->group(function () {
     include "_/admin/dashboard.php";
     include "_/sensor/humadity.php";
+    include "_/sensor/temperature.php";
+    include "_/sensor/waterLevel.php";
 });
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });

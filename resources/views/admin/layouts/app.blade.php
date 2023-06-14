@@ -17,10 +17,12 @@
     <link rel="shortcut icon" type="image/png" href="{{ url('admin') }}/dist/images/logos/favicon.png" />
     <!-- Owl Carousel -->
     <link rel="stylesheet" href="{{ url('admin') }}/dist/libs/owl.carousel/dist/assets/owl.carousel.min.css">
+
+    @stack('style')
+
     <!-- Core Css -->
     <link id="themeColors" rel="stylesheet" href="{{ url('admin') }}/dist/css/style.min.css" />
 
-    @stack('style')
 </head>
 
 <body>
@@ -44,7 +46,7 @@
             @include('admin.layouts.header')
             <!-- Header End -->
             <div class="container-fluid">
-               @yield('content')
+                @yield('content')
             </div>
             <!-- container-fluid over -->
         </div>
@@ -56,8 +58,7 @@
         <nav class="sidebar-nav scroll-sidebar">
             <div class="offcanvas-header justify-content-between">
                 <img src="{{ url('admin') }}/dist/images/logos/favicon.png" alt="" class="img-fluid">
-                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
-                    aria-label="Close"></button>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div class="offcanvas-body profile-dropdown mobile-navbar" data-simplebar="" data-simplebar>
                 <ul id="sidebarnav">
@@ -230,8 +231,7 @@
         </nav>
     </div>
     <!-- Search Bar -->
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
-        aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
         <div class="offcanvas-header">
             <h5 class="offcanvas-title" id="offcanvasRightLabel">Shopping Cart</h5>
             <span data-bs-dismiss="offcanvas" class="link-secondary cursor-pointer">
@@ -250,8 +250,8 @@
                             <div class="d-flex align-items-center mt-1">
                                 <h6 class="fs-4 me-2 fw-normal mb-0">$250</h6>
                                 <div class="input-group input-group-sm w-35">
-                                    <button class="btn btn-light-success text-success rounded-1 minus"
-                                        type="button" id="add1"> - </button>
+                                    <button class="btn btn-light-success text-success rounded-1 minus" type="button"
+                                        id="add1"> - </button>
                                     <input type="text"
                                         class="form-control bg-transparent border-0 rounded-1 text-center qty"
                                         placeholder="" aria-label="Example text with button addon"
@@ -273,8 +273,8 @@
                             <div class="d-flex align-items-center mt-1">
                                 <h6 class="fs-4 me-2 fw-normal mb-0">$250</h6>
                                 <div class="input-group input-group-sm w-35">
-                                    <button class="btn btn-light-success text-success rounded-1 minus"
-                                        type="button" id="add2"> - </button>
+                                    <button class="btn btn-light-success text-success rounded-1 minus" type="button"
+                                        id="add2"> - </button>
                                     <input type="text"
                                         class="form-control bg-transparent border-0 rounded-1 text-center qty"
                                         placeholder="" aria-label="Example text with button addon"
@@ -296,8 +296,8 @@
                             <div class="d-flex align-items-center mt-1">
                                 <h6 class="fs-4 me-2 fw-normal mb-0">$250</h6>
                                 <div class="input-group input-group-sm w-35">
-                                    <button class="btn btn-light-success text-success rounded-1 minus"
-                                        type="button" id="add3"> - </button>
+                                    <button class="btn btn-light-success text-success rounded-1 minus" type="button"
+                                        id="add3"> - </button>
                                     <input type="text"
                                         class="form-control bg-transparent border-0 rounded-1 text-center qty"
                                         placeholder="" aria-label="Example text with button addon"
@@ -420,7 +420,7 @@
         </div>
     </div>
     <!-- Customizer -->
-        @include('admin.layouts.customizer')
+    @include('admin.layouts.customizer')
     <!-- Customizer -->
     <!-- Import Js Files -->
     <script src="{{ url('admin') }}/dist/libs/jquery/dist/jquery.min.js"></script>

@@ -83,7 +83,7 @@
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a href="blog-detail.html" class="sidebar-link">
+                            <a href="{{ url('admin/temperature') }}" class="sidebar-link">
                                 <div class="round-16 d-flex align-items-center justify-content-center">
                                     <i class="ti ti-thermometer"></i>
                                 </div>
@@ -91,7 +91,7 @@
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a href="blog-posts.html" class="sidebar-link">
+                            <a href="{{ url('admin/waterLevel') }}" class="sidebar-link">
                                 <div class="round-16 d-flex align-items-center justify-content-center">
                                     <i class="ti ti-ripple"></i>
                                 </div>
