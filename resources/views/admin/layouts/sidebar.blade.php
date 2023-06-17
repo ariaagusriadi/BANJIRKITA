@@ -59,11 +59,19 @@
                     </a>
                 </li>
                 <li class="sidebar-item">
-                    <a class="sidebar-link" href="index2.html" aria-expanded="false">
+                    <a class="sidebar-link" href="{{ url('admin/monitoring-banjir') }}" aria-expanded="false">
                         <span>
-                            <i class="ti ti-shopping-cart"></i>
+                           <i class="ti ti-heart-rate-monitor"></i>
                         </span>
-                        <span class="hide-menu">eCommerce</span>
+                        <span class="hide-menu">Monitoring Banjir</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="{{ url('admin/locationSensor') }}" aria-expanded="false">
+                        <span>
+                            <i class="ti ti-current-location"></i>
+                        </span>
+                        <span class="hide-menu">Location Sensor</span>
                     </a>
                 </li>
                 <li class="sidebar-item">

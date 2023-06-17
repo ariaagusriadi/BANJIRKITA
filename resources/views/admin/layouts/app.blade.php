@@ -46,6 +46,7 @@
             @include('admin.layouts.header')
             <!-- Header End -->
             <div class="container-fluid">
+                @include('admin.layouts.utils.notification')
                 @yield('content')
             </div>
             <!-- container-fluid over -->

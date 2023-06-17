@@ -221,18 +221,16 @@
             <img src="https://demos.adminmart.com/premium/bootstrap/modernize-bootstrap/package/dist/images/logos/light-logo.svg"
                 class="light-logo" width="180" alt="" />
         </div>
-        <button class="navbar-toggler p-0 border-0" type="button" data-bs-toggle="collapse"
-            data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-            aria-label="Toggle navigation">
+        <button class="navbar-toggler p-0 border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="p-2">
                 <i class="ti ti-dots fs-7"></i>
             </span>
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <div class="d-flex align-items-center justify-content-between">
-                <a href="javascript:void(0)"
-                    class="nav-link d-flex d-lg-none align-items-center justify-content-center" type="button"
-                    data-bs-toggle="offcanvas" data-bs-target="#mobilenavbar"
+                <a href="javascript:void(0)" class="nav-link d-flex d-lg-none align-items-center justify-content-center"
+                    type="button" data-bs-toggle="offcanvas" data-bs-target="#mobilenavbar"
                     aria-controls="offcanvasWithBothOptions">
                     <i class="ti ti-align-justified fs-7"></i>
                 </a>
@@ -250,8 +248,7 @@
                                 <span class="badge bg-primary rounded-4 px-3 py-1 lh-sm">5 new</span>
                             </div>
                             <div class="message-body" data-simplebar>
-                                <a href="javascript:void(0)"
-                                    class="py-6 px-7 d-flex align-items-center dropdown-item">
+                                <a href="javascript:void(0)" class="py-6 px-7 d-flex align-items-center dropdown-item">
                                     <span class="me-3">
                                         <img src="{{ url('admin') }}/dist/images/profile/user-1.jpg" alt="user"
                                             class="rounded-circle" width="48" height="48" />
@@ -261,8 +258,7 @@
                                         <span class="d-block">Congratulate him</span>
                                     </div>
                                 </a>
-                                <a href="javascript:void(0)"
-                                    class="py-6 px-7 d-flex align-items-center dropdown-item">
+                                <a href="javascript:void(0)" class="py-6 px-7 d-flex align-items-center dropdown-item">
                                     <span class="me-3">
                                         <img src="{{ url('admin') }}/dist/images/profile/user-2.jpg" alt="user"
                                             class="rounded-circle" width="48" height="48" />
@@ -272,8 +268,7 @@
                                         <span class="d-block">Salma sent you new message</span>
                                     </div>
                                 </a>
-                                <a href="javascript:void(0)"
-                                    class="py-6 px-7 d-flex align-items-center dropdown-item">
+                                <a href="javascript:void(0)" class="py-6 px-7 d-flex align-items-center dropdown-item">
                                     <span class="me-3">
                                         <img src="{{ url('admin') }}/dist/images/profile/user-3.jpg" alt="user"
                                             class="rounded-circle" width="48" height="48" />
@@ -283,8 +278,7 @@
                                         <span class="d-block">Check your earnings</span>
                                     </div>
                                 </a>
-                                <a href="javascript:void(0)"
-                                    class="py-6 px-7 d-flex align-items-center dropdown-item">
+                                <a href="javascript:void(0)" class="py-6 px-7 d-flex align-items-center dropdown-item">
                                     <span class="me-3">
                                         <img src="{{ url('admin') }}/dist/images/profile/user-4.jpg" alt="user"
                                             class="rounded-circle" width="48" height="48" />
@@ -343,10 +337,9 @@
                                     <img src="{{ url('admin') }}/dist/images/profile/user-1.jpg"
                                         class="rounded-circle" width="80" height="80" alt="" />
                                     <div class="ms-3">
-                                        <h5 class="mb-1 fs-3">Mathew Anderson</h5>
-                                        <span class="mb-1 d-block text-dark">Designer</span>
+                                        <h5 class="mb-1 fs-3">{{ auth()->user()->username }}</h5>
                                         <p class="mb-0 d-flex text-dark align-items-center gap-2">
-                                            <i class="ti ti-mail fs-4"></i> info@modernize.com
+                                            <i class="ti ti-mail fs-4"></i> {{ auth()->user()->email }}
                                         </p>
                                     </div>
                                 </div>
@@ -403,7 +396,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <a href="authentication-login.html" class="btn btn-outline-primary">Log Out</a>
+                                    <a href="{{ url('logout') }}" class="btn btn-outline-primary">Log Out</a>
                                 </div>
                             </div>
                         </div>

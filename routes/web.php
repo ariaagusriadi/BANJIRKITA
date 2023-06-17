@@ -25,6 +25,8 @@ Route::middleware('auth')->prefix('admin')->group(function () {
     include "_/sensor/humadity.php";
     include "_/sensor/temperature.php";
     include "_/sensor/waterLevel.php";
+    include "_/admin/locationSensor.php";
+    include "_/admin/monitoringBanjir.php";
 });
 
 // Route::get('/', function () {

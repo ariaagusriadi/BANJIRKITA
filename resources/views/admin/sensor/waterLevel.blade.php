@@ -151,7 +151,7 @@
                 data: {
                     labels: [],
                     datasets: [{
-                        label: 'Temperature',
+                        label: 'Water Level',
                         data: [],
                         borderColor: 'rgba(0, 123, 255, 1)',
                         // backgroundColor: 'rgba(0, 123, 255, 0.5)',
