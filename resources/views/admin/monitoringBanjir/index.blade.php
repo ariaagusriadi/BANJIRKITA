@@ -23,7 +23,8 @@
                             @foreach ($locations as $location)
                                 <tr>
                                     <td>
-                                        <a href="{{ url('admin/monitoring-banjir', $location->id) }}" class="btn btn-sm btn-secondary">
+                                        <a href="{{ url('admin/monitoring-banjir', $location->id) }}"
+                                            class="btn btn-sm btn-secondary">
                                             <i class="ti ti-info-square"></i> Detail
                                         </a>
                                     </td>
@@ -45,35 +46,20 @@
                             class="img-fluid mb-4 rounded-circle position-relative" width="140">
                     </div>
                     <h1 class="display-6 mb-3 px-xl-5" id="waterlevel"></h1>
+                    <h5 class="fw-semibold fs-5 mb-2" id="location"></h5>
+
                 </div>
             </div>
             <div class="card">
                 <div class="card-body">
-                    <div class="mb-3 d-flex justify-content-center align-items-center rounded-3"
-                        style="height: 80px; width:310px; background-color:rgb(255,222,19); opacity: 25%;">
-                        <h5>Waspada / Siaga 3</h5>
+                    <h5 class="">Recent Data</h5>
+                    <div class="justify-content-center d-flex">
+                        <ul class="timeline-widget mb-3 mt-3 position-relative mb-n5" id="myUl">
+                        </ul>
                     </div>
-
-                    <div class="mb-3 d-flex justify-content-center align-items-center rounded-3"
-                        style="height: 80px; width:310px; background-color:rgb(246,145,40); opacity: 25%;">
-                        <h5>Siaga / Siaga 2</h5>
-                    </div>
-
-                    <div class="mb-3 d-flex justify-content-center align-items-center rounded-3"
-                        style="height: 80px; width:310px; background-color:rgb(235,28,38); opacity: 25%;">
-                        <h5>Bahaya / Siaga 1</h5>
-                    </div>
-
-                    <div class="mb-3 d-flex justify-content-center align-items-center rounded-3"
-                        style="height: 80px; width:310px; background-color:rgb(206,210,213); opacity: 25%;">
-                        <h5>Normal / Siaga 4</h5>
-                    </div>
-
                 </div>
             </div>
-
         </div>
-
     </div>
 @endsection
 
@@ -86,6 +72,7 @@
 
     <script>
         $(document).ready(function() {
+
             const image = new Image();
             image.src = "{{ asset('admin/icons/floads.svg') }}";
 
@@ -172,11 +159,29 @@
                         var waterlevel = data.ketingan_air;
                         addData(waterlevel, time);
 
-                        var waterLevel2 = waterlevel  + " Cm";
+                        var waterLevel2 = waterlevel + " Cm";
                         $('#waterlevel').text(waterLevel2);
+                        $('#location').text(data.location)
+
+                        $('#myUl').prepend(`
+                            <li class="timeline-item d-flex position-relative overflow-hidden">
+                                <div class="timeline-time text-dark flex-shrink-0 text-end">${time}</div>
+                                <div class="timeline-badge-wrap d-flex flex-column align-items-center">
+                                    <span class="timeline-badge border-2 border border-primary flex-shrink-0 my-8"></span>
+                                    <span class="timeline-badge-border d-block flex-shrink-0"></span>
+                                </div>
+                                <div class="timeline-desc fs-3 text-dark mt-n1">${data.location}</div>
+                            </li>
+                        `)
+
+                        if ($('#myUl li').length > 5) {
+                            $('#myUl li:last-child').remove();
+                        }
+
                     }
                 })
             }
+
 
             fetchData()
             setInterval(() => {
@@ -185,3 +190,29 @@
         })
     </script>
 @endpush
+
+{{-- <div class="card-body">
+    <div class="mb-3 d-flex justify-content-center align-items-center rounded-3"
+        style="height: 80px; width:310px; background-color:rgb(235,28,38); opacity: 25%;" id="bahaya">
+        <h5>Bahaya / Siaga 1</h5>
+    </div>
+
+    <div class="mb-3 d-flex justify-content-center align-items-center rounded-3"
+        style="height: 80px; width:310px; background-color:rgb(246,145,40); opacity: 25%;" id="siaga">
+        <h5>Siaga / Siaga 2</h5>
+    </div>
+
+    <div class="mb-3 d-flex justify-content-center align-items-center rounded-3"
+        style="height: 80px; width:310px; background-color:rgb(255,222,19); opacity: 25%;" id="waspada">
+        <h5>Waspada / Siaga 3</h5>
+    </div>
+
+
+    <div class="mb-3 d-flex justify-content-center align-items-center rounded-3"
+        style="height: 80px; width:310px; background-color:rgb(206,210,213); opacity: 25%;" id="normal">
+        <h5>Normal / Siaga 4</h5>
+    </div>
+
+</div> --}}
+
+

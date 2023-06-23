@@ -9,12 +9,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="handheldfriendly" content="true" />
     <meta name="MobileOptimized" content="width" />
-    <meta name="description" content="Mordenize" />
+    <meta name="description" content="Banjir Kita" />
     <meta name="author" content="" />
-    <meta name="keywords" content="Mordenize" />
+    <meta name="keywords" content="Banjir Kita" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <!--  Favicon -->
-    <link rel="shortcut icon" type="image/png" href="{{ url('admin') }}/dist/images/logos/favicon.png" />
+    <link rel="shortcut icon" type="image/png" href="{{ url('admin/logo/banjirkita.svg') }}" />
     <!-- Owl Carousel -->
     <link rel="stylesheet" href="{{ url('admin') }}/dist/libs/owl.carousel/dist/assets/owl.carousel.min.css">
 
@@ -28,11 +28,11 @@
 <body>
     <!-- Preloader -->
     <div class="preloader">
-        <img src="{{ url('admin') }}/dist/images/logos/favicon.png" alt="loader" class="lds-ripple img-fluid" />
+        <img src="{{ url('admin') }}/logo/banjirkita.png" alt="loader" class="lds-ripple img-fluid" />
     </div>
     <!-- Preloader -->
     <div class="preloader">
-        <img src="{{ url('admin') }}/dist/images/logos/favicon.png" alt="loader" class="lds-ripple img-fluid" />
+        <img src="{{ url('admin') }}/logo/banjirkita.png" alt="loader" class="lds-ripple img-fluid" />
     </div>
     <!-- Body Wrapper -->
     <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-sidebartype="full"

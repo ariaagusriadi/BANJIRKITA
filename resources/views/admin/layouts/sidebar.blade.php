@@ -1,11 +1,11 @@
 <aside class="left-sidebar">
     <!-- Sidebar scroll-->
     <div>
-        <div class="brand-logo d-flex align-items-center justify-content-between">
+        <div class="brand-logo mt-1 d-flex align-items-center justify-content-between">
             <a href="/" class="text-nowrap logo-img">
-                <img src="https://demos.adminmart.com/premium/bootstrap/modernize-bootstrap/package/dist/images/logos/dark-logo.svg"
+                <img src="{{ url('admin/logo/banjirkita.svg') }}"
                     class="dark-logo" width="180" alt="" />
-                <img src="https://demos.adminmart.com/premium/bootstrap/modernize-bootstrap/package/dist/images/logos/light-logo.svg"
+                <img src="{{ url('admin/logo/banjirkita.svg') }}"
                     class="light-logo" width="180" alt="" />
 
             </a>
@@ -51,19 +51,19 @@
                     <span class="hide-menu">Apps</span>
                 </li>
                 <li class="sidebar-item">
-                    <a class="sidebar-link" href="index2.html" aria-expanded="false">
+                    <a class="sidebar-link" href="{{ url('admin/monitoring-banjir') }}" aria-expanded="false">
                         <span>
-                            <i class="ti ti-shopping-cart"></i>
+                            <i class="ti ti-heart-rate-monitor"></i>
                         </span>
-                        <span class="hide-menu">eCommerce</span>
+                        <span class="hide-menu">Monitoring Banjir</span>
                     </a>
                 </li>
                 <li class="sidebar-item">
-                    <a class="sidebar-link" href="{{ url('admin/monitoring-banjir') }}" aria-expanded="false">
+                    <a class="sidebar-link" href="{{ url('admin/notification-center') }}" aria-expanded="false">
                         <span>
-                           <i class="ti ti-heart-rate-monitor"></i>
+                            <i class="ti ti-bell-ringing"></i>
                         </span>
-                        <span class="hide-menu">Monitoring Banjir</span>
+                        <span class="hide-menu">Notification Center</span>
                     </a>
                 </li>
                 <li class="sidebar-item">
@@ -109,6 +109,27 @@
                     </ul>
                 </li>
 
+
+                <li class="nav-small-cap">
+                    <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+                    <span class="hide-menu">Users</span>
+                </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="{{ url('admin/') }}" aria-expanded="false">
+                        <span>
+                            <i class="ti ti-user-cog"></i>
+                        </span>
+                        <span class="hide-menu">User</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="{{ url('home') }}" aria-expanded="false">
+                        <span>
+                            <i class="ti ti-home-2"></i>
+                        </span>
+                        <span class="hide-menu">Home</span>
+                    </a>
+                </li>
             </ul>
         </nav>
         <!-- End Sidebar navigation -->

@@ -14,7 +14,7 @@
     <meta name="keywords" content="Mordenize" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <!--  Favicon -->
-    <link rel="shortcut icon" type="image/png" href="{{ url('admin') }}/dist/images/logos/favicon.png" />
+    <link rel="shortcut icon" type="image/png" href="{{ url('admin/logo/banjirkita.svg') }}" />
     <!-- Core Css -->
     <link id="themeColors" rel="stylesheet" href="{{ url('admin') }}/dist/css/style.min.css" />
 </head>
@@ -22,11 +22,11 @@
 <body>
     <!-- Preloader -->
     <div class="preloader">
-        <img src="{{ url('admin') }}/dist/images/logos/favicon.png" alt="loader" class="lds-ripple img-fluid" />
+        <img src="{{ url('admin/logo/banjirkita.svg') }}" alt="loader" class="lds-ripple img-fluid" />
     </div>
     <!-- Preloader -->
     <div class="preloader">
-        <img src="{{ url('admin') }}/dist/images/logos/favicon.png" alt="loader" class="lds-ripple img-fluid" />
+        <img src="{{ url('admin/logo/banjirkita.svg') }}" alt="loader" class="lds-ripple img-fluid" />
     </div>
     <!--  Body Wrapper -->
     <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-sidebartype="full"
@@ -35,13 +35,13 @@
             <div class="position-relative z-index-5">
                 <div class="row">
                     <div class="col-xl-7 col-xxl-8">
-                        <a href="index.html" class="text-nowrap logo-img d-block px-4 py-9 w-100">
-                            <img src="https://demos.adminmart.com/premium/bootstrap/modernize-bootstrap/package/dist/images/logos/dark-logo.svg"
+                        {{-- <a href="#" class="text-nowrap logo-img d-block px-4 py-9 w-100">
+                            <img src="{{ url('admin/logo/banjirkita2.svg') }}"
                                 width="180" alt="" />
-                        </a>
+                        </a> --}}
                         <div class="d-none d-xl-flex align-items-center justify-content-center"
                             style="height: calc(100vh - 80px)">
-                            <img src="https://demos.adminmart.com/premium/bootstrap/modernize-bootstrap/package/dist/images/backgrounds/login-security.svg"
+                            <img src="{{ url('admin/logo/banjirkita.svg') }}"
                                 alt="" class="img-fluid" width="500" />
                         </div>
                     </div>
