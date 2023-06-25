@@ -2,7 +2,10 @@
 
 @section('content')
     <div class="card p-4">
-        <h5>Data 24 hours</h5>
+        <div class="">
+            @include('admin.layouts.utils.backbutton', ['url' => url('admin/monitoring-banjir')])
+        </div>
+        <h5 class="text-center">Data 24 hours</h5>
         <canvas id="myChart"></canvas>
     </div>
     <div class="card mt-2 p-4">

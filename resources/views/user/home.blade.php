@@ -41,14 +41,12 @@
                             <a class="nav-link" href="#header-section">Home <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#features-section">About</a>
+                            <a class="nav-link" href="#warning">warning</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#digital-marketing-section">Blog</a>
+                            <a class="nav-link" href="#weather">weather</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#feedback-section">Testimonials</a>
-                        </li>
+
                         <li class="nav-item btn-contact-us pl-4 pl-lg-0">
                             <button class="btn btn-info" data-toggle="modal" data-target="#exampleModal">Contact
                                 Us</button>
@@ -70,7 +68,7 @@
         </div>
     </div>
 
-    <div class="container-fluid mb-5" style="background-color: #D0E1F9">
+    <div class="container-fluid mb-5" style="background-color: #D0E1F9" id="warning">
         <div class="row justify-content-center py-5">
             <div class="col-md-8">
                 <div class="card" style="background-color: rgba(255, 255, 255, 0.5);">
@@ -91,65 +89,28 @@
             <div class="col-md-8 mt-5">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="text-center">Peringatan Dini Banjir</h4>
-                        <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <h4 class="text-center">Pemantauan Tinggi Air</h4>
+                        <p class="text-center">Data di ambil dalam waktu 24 jam terakhir</p>
                         <table class="table table-bordered">
                             <thead>
                                 <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">First</th>
-                                    <th scope="col">Last</th>
-                                    <th scope="col">Handle</th>
+                                    <th scope="col">No</th>
+                                    <th scope="col">Location</th>
+                                    <th scope="col">Water Level</th>
+                                    <th scope="col">Time</th>
+                                    <th scope="col">Date</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">2</th>
-                                    <td>Jacob</td>
-                                    <td>Thornton</td>
-                                    <td>@fat</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">2</th>
-                                    <td>Jacob</td>
-                                    <td>Thornton</td>
-                                    <td>@fat</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">2</th>
-                                    <td>Jacob</td>
-                                    <td>Thornton</td>
-                                    <td>@fat</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">2</th>
-                                    <td>Jacob</td>
-                                    <td>Thornton</td>
-                                    <td>@fat</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">2</th>
-                                    <td>Jacob</td>
-                                    <td>Thornton</td>
-                                    <td>@fat</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">2</th>
-                                    <td>Jacob</td>
-                                    <td>Thornton</td>
-                                    <td>@fat</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">3</th>
-                                    <td colspan="2">Larry the Bird</td>
-                                    <td>@twitter</td>
-                                </tr>
+                                @foreach ($list_waterLevel as $waterLevel)
+                                    <tr>
+                                        <th>{{ $loop->iteration }}</th>
+                                        <td>{{ $waterLevel->location }}</td>
+                                        <td>{{ $waterLevel->water_level }}</td>
+                                        <td>{{ $waterLevel->time }}</td>
+                                        <td>{{ $waterLevel->created_at->format('F j, Y') }}</td>
+                                    </tr>
+                                @endforeach
                             </tbody>
                         </table>
                     </div>
@@ -158,7 +119,7 @@
         </div>
     </div>
 
-    <div class="container">
+    <div class="container" id="weather">
         <section class="case-studies" id="case-studies-section">
             <div class="row grid-margin">
                 <div class="col-12 text-center pb-5">
@@ -200,7 +161,7 @@
             </div>
         </section>
     </div>
-
+    {{--
     <div class="container">
         <section class="customer-feedback" id="feedback-section">
             <div class="row">
@@ -330,9 +291,9 @@
                 </div>
             </div>
         </section>
-    </div>
+    </div> --}}
 
-    <div class="container">
+    {{-- <div class="container">
         <section class="contact-us" id="contact-section">
             <div class="contact-us-bgimage grid-margin">
                 <div class="pb-4">
@@ -393,44 +354,14 @@
                 </div>
             </div>
         </section>
-    </div>
+    </div> --}}
     <div class="container">
         <footer class="border-top">
-            <p class="text-center text-muted pt-4">Copyright © 2019<a href="https://www.bootstrapdash.com/"
-                    class="px-1">Bootstrapdash.</a>All rights reserved.</p>
+            <p class="text-center text-muted pt-4">Copyright © 2023<a href="#" class="px-1">CodeWrite</a>All
+                rights reserved.</p>
         </footer>
     </div>
-    <!-- Modal for Contact - us Button -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title" id="exampleModalLabel">Contact Us</h4>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="form-group">
-                            <label for="Name">Name</label>
-                            <input type="text" class="form-control" id="Name" placeholder="Name">
-                        </div>
-                        <div class="form-group">
-                            <label for="Email">Email</label>
-                            <input type="email" class="form-control" id="Email-1" placeholder="Email">
-                        </div>
-                        <div class="form-group">
-                            <label for="Message">Message</label>
-                            <textarea class="form-control" id="Message" placeholder="Enter your Message"></textarea>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-success">Submit</button>
-                </div>
-            </div>
-        </div>
-    </div>
+
 
     <script src="{{ url('user') }}/vendors/jquery/jquery.min.js"></script>
     <script src="{{ url('user') }}/vendors/bootstrap/bootstrap.min.js"></script>

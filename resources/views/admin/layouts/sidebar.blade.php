@@ -3,10 +3,8 @@
     <div>
         <div class="brand-logo mt-1 d-flex align-items-center justify-content-between">
             <a href="/" class="text-nowrap logo-img">
-                <img src="{{ url('admin/logo/banjirkita.svg') }}"
-                    class="dark-logo" width="180" alt="" />
-                <img src="{{ url('admin/logo/banjirkita.svg') }}"
-                    class="light-logo" width="180" alt="" />
+                <img src="{{ url('admin/logo/banjirkita.svg') }}" class="dark-logo" width="180" alt="" />
+                <img src="{{ url('admin/logo/banjirkita.svg') }}" class="light-logo" width="180" alt="" />
 
             </a>
             <div class="close-btn d-lg-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
@@ -59,19 +57,19 @@
                     </a>
                 </li>
                 <li class="sidebar-item">
-                    <a class="sidebar-link" href="{{ url('admin/notification-center') }}" aria-expanded="false">
-                        <span>
-                            <i class="ti ti-bell-ringing"></i>
-                        </span>
-                        <span class="hide-menu">Notification Center</span>
-                    </a>
-                </li>
-                <li class="sidebar-item">
                     <a class="sidebar-link" href="{{ url('admin/locationSensor') }}" aria-expanded="false">
                         <span>
                             <i class="ti ti-current-location"></i>
                         </span>
                         <span class="hide-menu">Location Sensor</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="{{ url('admin/') }}" aria-expanded="false">
+                        <span>
+                            <i class="ti ti-forbid"></i>
+                        </span>
+                        <span class="hide-menu">Standby limit indicator</span>
                     </a>
                 </li>
                 <li class="sidebar-item">
@@ -109,6 +107,26 @@
                     </ul>
                 </li>
 
+                <li class="nav-small-cap">
+                    <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+                    <span class="hide-menu">Webiste</span>
+                </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="{{ url('admin/notification-center') }}" aria-expanded="false">
+                        <span>
+                            <i class="ti ti-bell-ringing"></i>
+                        </span>
+                        <span class="hide-menu">Notification Center</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="{{ url('home') }}" aria-expanded="false">
+                        <span>
+                            <i class="ti ti-home-2"></i>
+                        </span>
+                        <span class="hide-menu">Home</span>
+                    </a>
+                </li>
 
                 <li class="nav-small-cap">
                     <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
@@ -122,14 +140,9 @@
                         <span class="hide-menu">User</span>
                     </a>
                 </li>
-                <li class="sidebar-item">
-                    <a class="sidebar-link" href="{{ url('home') }}" aria-expanded="false">
-                        <span>
-                            <i class="ti ti-home-2"></i>
-                        </span>
-                        <span class="hide-menu">Home</span>
-                    </a>
-                </li>
+
+
+
             </ul>
         </nav>
         <!-- End Sidebar navigation -->
