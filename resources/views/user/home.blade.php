@@ -106,7 +106,7 @@
                                     <tr>
                                         <th>{{ $loop->iteration }}</th>
                                         <td>{{ $waterLevel->location }}</td>
-                                        <td>{{ $waterLevel->water_level }}</td>
+                                        <td>{{ $waterLevel->water_level }} Cm</td>
                                         <td>{{ $waterLevel->time }}</td>
                                         <td>{{ $waterLevel->created_at->format('F j, Y') }}</td>
                                     </tr>

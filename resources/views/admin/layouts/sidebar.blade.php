@@ -2,7 +2,7 @@
     <!-- Sidebar scroll-->
     <div>
         <div class="brand-logo mt-1 d-flex align-items-center justify-content-between">
-            <a href="/" class="text-nowrap logo-img">
+            <a href="{{ url('admin/dashboard') }}" class="text-nowrap logo-img">
                 <img src="{{ url('admin/logo/banjirkita.svg') }}" class="dark-logo" width="180" alt="" />
                 <img src="{{ url('admin/logo/banjirkita.svg') }}" class="light-logo" width="180" alt="" />
 
@@ -65,7 +65,7 @@
                     </a>
                 </li>
                 <li class="sidebar-item">
-                    <a class="sidebar-link" href="{{ url('admin/') }}" aria-expanded="false">
+                    <a class="sidebar-link" href="{{ url('admin/indicator-limit') }}" aria-expanded="false">
                         <span>
                             <i class="ti ti-forbid"></i>
                         </span>

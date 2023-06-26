@@ -30,6 +30,7 @@ Route::middleware('auth')->prefix('admin')->group(function () {
     include "_/admin/locationSensor.php";
     include "_/admin/monitoringBanjir.php";
     include "_/admin/notificationCenter.php";
+    include "_/admin/indicatorLimit.php";
 });
 
 // Route::get('/', function () {
