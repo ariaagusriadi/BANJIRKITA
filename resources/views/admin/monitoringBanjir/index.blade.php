@@ -162,12 +162,13 @@
 
             function fetchData() {
                 $.ajax({
-                    url: '/admin/monitoring-banjir/fetchData',
+                    url: '/admin/fetchDatabase',
                     type: 'GET',
                     dataType: 'json',
                     success: (data) => {
+                        // console.log(data);
                         var time = data.time;
-                        var waterlevel = data.ketingan_air;
+                        var waterlevel = data.water_level;
                         addData(waterlevel, time);
 
                         var waterLevel2 = waterlevel + " Cm";
@@ -197,7 +198,7 @@
             fetchData()
             setInterval(() => {
                 fetchData()
-            }, 100000);
+            }, 600000); // 10 menit
         })
     </script>
 @endpush

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\FetchDataController;
 use App\Http\Controllers\auth\LoginController;
 use Illuminate\Support\Facades\Route;
 
@@ -31,6 +32,7 @@ Route::middleware('auth')->prefix('admin')->group(function () {
     include "_/admin/monitoringBanjir.php";
     include "_/admin/notificationCenter.php";
     include "_/admin/indicatorLimit.php";
+    include "_/admin/FetchDataController.php";
 });
 
 // Route::get('/', function () {

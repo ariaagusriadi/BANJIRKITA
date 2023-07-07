@@ -4,6 +4,7 @@ namespace App\Models\admin;
 
 use App\Models\Admin\IndicatorLimit;
 use App\Models\Model;
+use App\Models\Notification;
 
 class LocationSensor extends Model
 {
@@ -12,5 +13,10 @@ class LocationSensor extends Model
     public function indicatorLimit()
     {
         return $this->hasOne(IndicatorLimit::class, 'id_location');
+    }
+
+    public function notification()
+    {
+        return $this->hasMany(Notification::class, 'location');
     }
 }
