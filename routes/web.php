@@ -33,6 +33,7 @@ Route::middleware('auth')->prefix('admin')->group(function () {
     include "_/admin/notificationCenter.php";
     include "_/admin/indicatorLimit.php";
     include "_/admin/FetchDataController.php";
+    include "_/admin/user.php";
 });
 
 // Route::get('/', function () {

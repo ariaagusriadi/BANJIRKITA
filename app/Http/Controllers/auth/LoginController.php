@@ -22,7 +22,7 @@ class LoginController extends Controller
 
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
-            return redirect('/admin/dashboard');
+            return redirect('/admin/monitoring-banjir');
         } else {
             return back()->with('danger', 'login failed');
         }

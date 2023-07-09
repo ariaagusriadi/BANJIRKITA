@@ -17,21 +17,21 @@
                 <!-- ============================= -->
                 <!-- Home -->
                 <!-- ============================= -->
-                <li class="nav-small-cap">
+                {{-- <li class="nav-small-cap">
                     <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
                     <span class="hide-menu">Home</span>
-                </li>
+                </li> --}}
                 <!-- =================== -->
                 <!-- Dashboard -->
                 <!-- =================== -->
-                <li class="sidebar-item">
+                {{-- <li class="sidebar-item">
                     <a class="sidebar-link" href="{{ url('admin/dashboard') }}" aria-expanded="false">
                         <span>
                             <i class="ti ti-home-infinity"></i>
                         </span>
                         <span class="hide-menu">Dashboard</span>
                     </a>
-                </li>
+                </li> --}}
                 {{-- <li class="sidebar-item">
                     <a class="sidebar-link" href="index2.html" aria-expanded="false">
                         <span>
@@ -133,7 +133,7 @@
                     <span class="hide-menu">Users</span>
                 </li>
                 <li class="sidebar-item">
-                    <a class="sidebar-link" href="{{ url('admin/') }}" aria-expanded="false">
+                    <a class="sidebar-link" href="{{ url('admin/user') }}" aria-expanded="false">
                         <span>
                             <i class="ti ti-user-cog"></i>
                         </span>
