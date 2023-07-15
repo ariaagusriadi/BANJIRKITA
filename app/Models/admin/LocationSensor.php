@@ -8,7 +8,7 @@ use App\Models\Notification;
 
 class LocationSensor extends Model
 {
-    protected $table = 'location_sensor';
+    protected $table = 'lokasi_sensor';
 
     public function indicatorLimit()
     {

@@ -13,13 +13,13 @@ class MonitoringBanjirController extends Controller
     public function index()
     {
         return view('admin.monitoringBanjir.index', [
-            'locations' => LocationSensor::all()
+            'locations' => LocationSensor::all(),
+            'waterLevels' => WaterLevel::latest()->take(10)->get()
         ]);
     }
 
     public function show(LocationSensor $location)
     {
-
         return view('admin.monitoringBanjir.show', [
             'waterLevels' => WaterLevel::where('location', $location->location_name)->orderByDesc('created_at')->take(24)->get()
         ]);

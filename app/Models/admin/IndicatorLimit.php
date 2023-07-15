@@ -7,7 +7,7 @@ use App\Models\Model;
 
 class IndicatorLimit extends Model
 {
-    protected $table = 'indicator_limit';
+    protected $table = 'batas_ketinggian_air';
 
     public function location()
     {

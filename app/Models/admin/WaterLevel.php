@@ -6,5 +6,5 @@ use App\Models\Model;
 
 class WaterLevel extends Model
 {
-    protected $table = "data_water_level";
+    protected $table = "ketinggian_air";
 }

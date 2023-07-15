@@ -85,6 +85,11 @@
                                         &nbsp {{ $notification_log->locations->location_name }} &nbsp
                                         {{ $notification_log->created_at->format('F j, Y, g:i a') }}
 
+                                        <form action="{{ url('admin/notification-center/delete', $notification_log->id) }}" method="post">
+                                            @csrf
+                                            @method('delete')
+                                            <button id="delete" class="btn btn-warning float-end">Delete</button>
+                                        </form>
                                     </div>
                                 </div>
                             @endforeach
@@ -123,6 +128,29 @@
                     Swal.fire(
                         'Un Published!',
                         'Your notification Un Published.',
+                        'success'
+                    )
+                    form.submit();
+                }
+            })
+        })
+        $(document).on('click', '#delete', function(e) {
+            e.preventDefault();
+            const form = $(this).parents('form');
+
+            Swal.fire({
+                title: 'Are you sure?',
+                text: "You won't be able to revert this!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#2D384A',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, Delete!'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    Swal.fire(
+                        'Delete!',
+                        'Your notification delete.',
                         'success'
                     )
                     form.submit();

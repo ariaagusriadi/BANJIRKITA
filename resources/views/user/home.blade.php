@@ -48,10 +48,10 @@
                             <a class="nav-link" href="#weather">weather</a>
                         </li>
 
-                        <li class="nav-item btn-contact-us pl-4 pl-lg-0">
+                        {{-- <li class="nav-item btn-contact-us pl-4 pl-lg-0">
                             <a class="btn btn-info" href="{{ url('login') }}">
                                 Login</a>
-                        </li>
+                        </li> --}}
                     </ul>
                 </div>
             </div>
@@ -93,9 +93,12 @@
                                         <h5 class="ml-3 mb-3"> <span
                                                 class="p-3 badge bg-secondary">{{ $notification->created_at->format('F j, Y, g:i a') }}</span>
                                         </h5>
+                                        <h5 class="ml-3 mb-3"> <span
+                                                class="p-3 badge bg-secondary">{{ $notification->status }}</span>
+                                        </h5>
                                     </div>
                                 </div>
-                            @elseif ($notification->status == 'Waspada')
+                            @elseif ($notification->status == 'Siaga')
                                 <div class="card mb-3" style="background-color:rgb(246,145,40);">
                                     <div class="card-body">
                                         <h4>{{ $notification->title }}</h4>
@@ -111,9 +114,12 @@
                                         <h5 class="ml-3 mb-3"> <span
                                                 class="p-3 badge bg-secondary">{{ $notification->created_at->format('F j, Y, g:i a') }}</span>
                                         </h5>
+                                        <h5 class="ml-3 mb-3"> <span
+                                                class="p-3 badge bg-secondary">{{ $notification->status }}</span>
+                                        </h5>
                                     </div>
                                 </div>
-                            @elseif ($notification->status == 'Siaga')
+                            @elseif ($notification->status == 'Waspada')
                                 <div class="card mb-3" style="background-color:rgb(255,222,19);">
                                     <div class="card-body">
                                         <h4>{{ $notification->title }}</h4>
@@ -128,6 +134,9 @@
                                         </h5>
                                         <h5 class="ml-3 mb-3"> <span
                                                 class="p-3 badge bg-secondary">{{ $notification->created_at->format('F j, Y, g:i a') }}</span>
+                                        </h5>
+                                        <h5 class="ml-3 mb-3"> <span
+                                                class="p-3 badge bg-secondary">{{ $notification->status }}</span>
                                         </h5>
                                     </div>
                                 </div>
@@ -146,6 +155,9 @@
                                         </h5>
                                         <h5 class="ml-3 mb-3"> <span
                                                 class="p-3 badge bg-secondary">{{ $notification->created_at->format('F j, Y, g:i a') }}</span>
+                                        </h5>
+                                        <h5 class="ml-3 mb-3"> <span
+                                                class="p-3 badge bg-secondary">{{ $notification->status }}</span>
                                         </h5>
                                     </div>
                                 </div>

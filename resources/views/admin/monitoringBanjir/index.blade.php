@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-9">
             <div class="card">
                 <div class="card-body">
                     <canvas id="myChart"></canvas>
@@ -48,15 +48,15 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-3">
             <div class="card mb-2">
                 <div class="card-body text-center">
                     <h5 class="fw-semibold fs-5 mb-4">Water Level</h5>
                     <div class="position-relative overflow-hidden d-inline-block">
-                        <img src="{{ url('admin/icons/waterlevel.svg') }}" width="80" alt=""
-                            class="img-fluid mb-4 rounded-circle position-relative" width="140">
+                        <img src="{{ url('admin/icons/waterlevel.svg') }}" width="50" alt=""
+                            class="img-fluid mb-4 rounded-circle position-relative" width="100">
                     </div>
-                    <h1 class="display-6 mb-3 px-xl-5" id="waterlevel"></h1>
+                    <h3 class="mb-3  px-xl-5" id="waterlevel"></h3>
                     <h5 class="fw-semibold fs-5 mb-2" id="location"></h5>
 
                 </div>
@@ -108,14 +108,48 @@
                 }
             };
 
+            const data = <?php echo json_encode($waterLevels); ?>
+
+            const water_level = data.map((item) => {
+                return item.water_level
+            })
+
+            const location = data.map((item) => {
+                return item.location
+            })
+
+            const locations = location.slice(-5);
+
+            const time = data.map((item) => {
+                return item.time
+            })
+
+            function addUl() {
+                for (let i = 0; i < 5; i++) {
+                    $('#myUl').prepend(`
+                        <li class="timeline-item d-flex position-relative overflow-hidden">
+                            <div class="timeline-time text-dark flex-shrink-0 text-end">${time[i]}</div>
+                                <div class="timeline-badge-wrap d-flex flex-column align-items-center">
+                                    <span class="timeline-badge border-2 border border-primary flex-shrink-0 my-8"></span>
+                                    <span class="timeline-badge-border d-block flex-shrink-0"></span>
+                                </div>
+                            <div class="timeline-desc fs-3 text-dark mt-n1">${locations[i]}</div>
+                        </li>
+                    `)
+                }
+            }
+
+            addUl()
+            // console.log(locations);
+
             var ctx = document.getElementById("myChart").getContext('2d');
             var chart = new Chart(ctx, {
                 type: 'line',
                 data: {
-                    labels: [],
+                    labels: time.slice().reverse(),
                     datasets: [{
                         label: 'Water Level',
-                        data: [],
+                        data: water_level.slice().reverse(),
                         borderColor: 'rgba(0, 123, 255, 1)',
                         // backgroundColor: 'rgba(0, 123, 255, 0.5)',
                         // fill: 'origin',
@@ -147,13 +181,13 @@
             function addData(data, currentTime) {
 
                 chart.data.labels.push(currentTime);
-                if (chart.data.labels.length > 5) {
-                    chart.data.labels = chart.data.labels.slice(-5);
+                if (chart.data.labels.length > 10) {
+                    chart.data.labels = chart.data.labels.slice(-10);
                 }
 
                 chart.data.datasets[0].data.push(data);
-                if (chart.data.datasets[0].data.length > 5) {
-                    chart.data.datasets[0].data = chart.data.datasets[0].data.slice(-5);
+                if (chart.data.datasets[0].data.length > 10) {
+                    chart.data.datasets[0].data = chart.data.datasets[0].data.slice(-10);
                 }
 
                 chart.update();
@@ -195,10 +229,14 @@
             }
 
 
+            // fetchData()
+            // setInterval(() => {
+            //     fetchData()
+            // }, 60000); // 10 menit
             fetchData()
             setInterval(() => {
                 fetchData()
-            }, 600000); // 10 menit
+            }, 3600000); // 1 jam
         })
     </script>
 @endpush

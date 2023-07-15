@@ -50,4 +50,9 @@ class NotificationCenterController extends Controller
         $notification->save();
         return back()->with('success', 'success Un Published notification');
     }
+
+    public function destroy(Notification $notification_log){
+        $notification_log->delete();
+        return back()->with('danger', 'success delete notification');
+    }
 }

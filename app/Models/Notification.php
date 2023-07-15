@@ -7,7 +7,7 @@ use App\Models\Model;
 
 class Notification extends Model
 {
-    protected $table = 'notification';
+    protected $table = 'notifikasi';
 
     public function locations()
     {
