@@ -18,6 +18,14 @@ class MonitoringBanjirController extends Controller
         ]);
     }
 
+    public function monitor(){
+        return view('admin.monitoringBanjir.monitor');
+    }
+    public function monitorFetchData(){
+        $total = WaterLevel::count();
+        return $total;
+    }
+
     public function show(LocationSensor $location)
     {
         return view('admin.monitoringBanjir.show', [

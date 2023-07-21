@@ -23,7 +23,7 @@
                                             <i class="ti ti-info-circle"></i>
                                         </a>
                                         @if (!$location->indicatorLimit)
-                                            <a href="{{ url('admin/indicator-limit/edit', $location->id) }}"
+                                            <a href="{{ url('admin/indicator-limit/create', $location->id) }}"
                                                 class="btn btn-success">
                                                 <i class="ti ti-settings"></i>
                                             </a>

@@ -15,8 +15,10 @@ class FetchDataController extends Controller
         $client = new Client();
 
         $response = $client->get('http://localhost:2000/api');
+        // $response = $client->get(env('API_ENDPOINT'));
         $data = json_decode($response->getBody(), true);
         return response()->json($data['data']);
+        // return response()->json($data);
     }
 
     public function getData($id)

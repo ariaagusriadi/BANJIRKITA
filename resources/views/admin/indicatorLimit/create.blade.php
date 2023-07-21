@@ -33,9 +33,8 @@
         <div class="col-md-5">
             <div class="card">
                 <div class="card-body">
-                    <form action="{{ url('admin/indicator-limit', $location->indicatorlimit->id) }}" method="post">
+                    <form action="{{ url('admin/indicator-limit') }}" method="post">
                         @csrf
-                        @method('PUT')
                         <input type="hidden" name="id_location" value="{{ $location->id }}">
                         <div class="mb-3 p-3 rounded-3" style="background-color:rgb(235,28,38); ">
                             <label for="" class="form-label">Bahaya / Siaga 1</label>
@@ -43,12 +42,12 @@
                                 <div class="col">
                                     <input type="number"
                                         class="form-control bg-white @error('bahaya_1') is-invalid @enderror"
-                                        name="bahaya_1" value="{{ $location->indicatorlimit->bahaya_1 }}">
+                                        name="bahaya_1">
                                 </div>
                                 <div class="col">
                                     <input type="number"
                                         class="form-control bg-white @error('bahaya_2') is-invalid @enderror"
-                                        name="bahaya_2" value="{{ $location->indicatorlimit->bahaya_2 }}">
+                                        name="bahaya_2">
                                 </div>
                             </div>
                         </div>
@@ -58,13 +57,11 @@
                             <div class="row">
                                 <div class="col">
                                     <input type="number"
-                                        class="form-control bg-white @error('siaga_1') is-invalid @enderror" name="siaga_1"
-                                        value="{{ $location->indicatorlimit->siaga_1 }}">
+                                        class="form-control bg-white @error('siaga_1') is-invalid @enderror" name="siaga_1">
                                 </div>
                                 <div class="col">
                                     <input type="number"
-                                        class="form-control bg-white @error('siaga_2') is-invalid @enderror" name="siaga_2"
-                                        value="{{ $location->indicatorlimit->siaga_2 }}">
+                                        class="form-control bg-white @error('siaga_2') is-invalid @enderror" name="siaga_2">
                                 </div>
                             </div>
                         </div>
@@ -75,12 +72,12 @@
                                 <div class="col">
                                     <input type="number"
                                         class="form-control bg-white @error('waspada_1') is-invalid @enderror"
-                                        name="waspada_1" value="{{ $location->indicatorlimit->waspada_1 }}">
+                                        name="waspada_1">
                                 </div>
                                 <div class="col">
                                     <input type="number"
                                         class="form-control bg-white @error('waspada_2') is-invalid @enderror"
-                                        name="waspada_2" value="{{ $location->indicatorlimit->waspada_2 }}">
+                                        name="waspada_2">
                                 </div>
                             </div>
                         </div>
@@ -91,18 +88,18 @@
                                 <div class="col">
                                     <input type="number"
                                         class="form-control bg-white @error('normal_1') is-invalid @enderror"
-                                        name="normal_1" value="{{ $location->indicatorlimit->normal_1 }}">
+                                        name="normal_1">
                                 </div>
                                 <div class="col">
                                     <input type="number"
                                         class="form-control bg-white @error('normal_2') is-invalid @enderror"
-                                        name="normal_2" value="{{ $location->indicatorlimit->normal_2 }}">
+                                        name="normal_2">
                                 </div>
                             </div>
                         </div>
 
                         <div class="mb-3 d-grid">
-                            <button class="btn btn-dark">Edit</button>
+                            <button class="btn btn-dark">Save</button>
                         </div>
                     </form>
                 </div>

@@ -232,7 +232,7 @@
             // fetchData()
             // setInterval(() => {
             //     fetchData()
-            // }, 60000); // 10 menit
+            // }, 60000); // 1 menit
             fetchData()
             setInterval(() => {
                 fetchData()

@@ -16,9 +16,9 @@ class IndicatorLimitController extends Controller
         ]);
     }
 
-    public function edit(LocationSensor $location)
+    public function create(LocationSensor $location)
     {
-        return view('admin.indicatorLimit.edit', [
+        return view('admin.indicatorLimit.create', [
             'location' => $location,
             'location_1' => explode(',', $location->location)[0],
             'location_2' => explode(',', $location->location)[1]
@@ -61,5 +61,29 @@ class IndicatorLimitController extends Controller
             'location_1' => explode(',', $location->location)[0],
             'location_2' => explode(',', $location->location)[1]
         ]);
+    }
+
+    public function edit(LocationSensor $location)
+    {
+        return view('admin.indicatorLimit.edit', [
+            'location' => $location,
+            'location_1' => explode(',', $location->location)[0],
+            'location_2' => explode(',', $location->location)[1]
+        ]);
+    }
+
+    public function update(Request $request, IndicatorLimit $indicatorLimit)
+    {
+        $indicatorLimit->bahaya_1 = $request->bahaya_1;
+        $indicatorLimit->bahaya_2 = $request->bahaya_2;
+        $indicatorLimit->siaga_1 = $request->siaga_1;
+        $indicatorLimit->siaga_2 = $request->siaga_2;
+        $indicatorLimit->waspada_1 = $request->waspada_1;
+        $indicatorLimit->waspada_2 = $request->waspada_2;
+        $indicatorLimit->normal_1 = $request->normal_1;
+        $indicatorLimit->normal_2 = $request->normal_2;
+        $indicatorLimit->save();
+
+        return redirect('admin/indicator-limit')->with('warning', 'success edit indicator limit');
     }
 }

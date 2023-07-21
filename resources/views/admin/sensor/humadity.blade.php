@@ -22,7 +22,7 @@
             </div>
         </div>
     </div>
-    <div class="row">
+    {{-- <div class="row">
         <div class="col-md-12">
             <div class="card">
                 <div class="card-body">
@@ -88,7 +88,7 @@
             </div>
 
         </div>
-    </div>
+    </div> --}}
 @endsection
 
 @push('style')
@@ -204,6 +204,8 @@
                     dataType: 'json',
                     success: (data) => {
                         var time = data.date;
+                        // var humidty = data.kelembapan;
+                        // var time = data.time;
                         var humidty = data.kelembapan;
                         addData(humidty, time);
 
