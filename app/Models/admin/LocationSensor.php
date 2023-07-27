@@ -2,7 +2,7 @@
 
 namespace App\Models\admin;
 
-use App\Models\Admin\IndicatorLimit;
+use App\Models\admin\IndicatorLimit;
 use App\Models\Model;
 use App\Models\Notification;
 
