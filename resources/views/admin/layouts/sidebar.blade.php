@@ -2,7 +2,7 @@
     <!-- Sidebar scroll-->
     <div>
         <div class="brand-logo mt-1 d-flex align-items-center justify-content-between">
-            <a href="{{ url('admin/dashboard') }}" class="text-nowrap logo-img">
+            <a href="{{ url('admin/monitoring-banjir') }}" class="text-nowrap logo-img">
                 <img src="{{ url('admin/logo/banjirkita.svg') }}" class="dark-logo" width="180" alt="" />
                 <img src="{{ url('admin/logo/banjirkita.svg') }}" class="light-logo" width="180" alt="" />
 
