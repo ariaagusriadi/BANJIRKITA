@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\Admin\IndicatorLimit;
+use App\Models\admin\IndicatorLimit;
 use App\Models\admin\LocationSensor;
 use Illuminate\Http\Request;
 
