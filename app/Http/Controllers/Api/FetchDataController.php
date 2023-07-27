@@ -6,7 +6,7 @@ use GuzzleHttp\Client;
 use Illuminate\Http\Request;
 use App\Models\admin\WaterLevel;
 use App\Http\Controllers\Controller;
-use App\Models\Admin\IndicatorLimit;
+use App\Models\admin\IndicatorLimit;
 
 class FetchDataController extends Controller
 {

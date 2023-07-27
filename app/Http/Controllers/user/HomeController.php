@@ -13,7 +13,6 @@ class HomeController extends Controller
     public function index(){
 
         $client = new Client();
-
         $response = $client->get('https://ibnux.github.io/BMKG-importer/cuaca/501311.json');
         $data['all_weather'] = json_decode($response->getBody(), true);
         $data['time'] = time();
