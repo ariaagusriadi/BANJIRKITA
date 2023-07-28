@@ -94,14 +94,16 @@
                                                     </div>
                                                     <div class="col-md-4">
                                                         <h5> <span class="p-3 badge"
-                                                                style="background-color: #EB1C26">{{ $notification->created_at->format('F j, Y, g:i a') }}</span>
-                                                        </h5>
-                                                    </div>
-                                                    <div class="col-md-4">
-                                                        <h5> <span class="p-3 badge"
                                                                 style="background-color: #EB1C26">{{ $notification->status }}</span>
                                                         </h5>
                                                     </div>
+
+                                                    <div class="col-md-4">
+                                                        <h5> <span class="p-3 badge"
+                                                                style="background-color: #EB1C26">{{ $notification->created_at->format('F j, Y, g:i a') }}</span>
+                                                        </h5>
+                                                    </div>
+
                                                 </div>
                                             </div>
                                         </div>
@@ -130,14 +132,16 @@
                                                     </div>
                                                     <div class="col-md-4">
                                                         <h5> <span class="p-3 badge"
-                                                                style="background-color: #F69128">{{ $notification->created_at->format('F j, Y, g:i a') }}</span>
-                                                        </h5>
-                                                    </div>
-                                                    <div class="col-md-4">
-                                                        <h5> <span class="p-3 badge"
                                                                 style="background-color: #F69128">{{ $notification->status }}</span>
                                                         </h5>
                                                     </div>
+
+                                                    <div class="col-md-4">
+                                                        <h5> <span class="p-3 badge"
+                                                                style="background-color: #F69128">{{ $notification->created_at->format('F j, Y, g:i a') }}</span>
+                                                        </h5>
+                                                    </div>
+
                                                 </div>
                                             </div>
                                         </div>
@@ -166,14 +170,15 @@
                                                     </div>
                                                     <div class="col-md-4">
                                                         <h5> <span class="p-3 badge"
-                                                                style="background-color: #FFDE13">{{ $notification->created_at->format('F j, Y, g:i a') }}</span>
+                                                                style="background-color: #FFDE13">{{ $notification->status }}</span>
                                                         </h5>
                                                     </div>
                                                     <div class="col-md-4">
                                                         <h5> <span class="p-3 badge"
-                                                                style="background-color: #FFDE13">{{ $notification->status }}</span>
+                                                                style="background-color: #FFDE13">{{ $notification->created_at->format('F j, Y, g:i a') }}</span>
                                                         </h5>
                                                     </div>
+
                                                 </div>
                                             </div>
                                         </div>
@@ -202,14 +207,15 @@
                                                     </div>
                                                     <div class="col-md-4">
                                                         <h5> <span class="p-3 badge"
-                                                                style="background-color: #CED2D5">{{ $notification->created_at->format('F j, Y, g:i a') }}</span>
+                                                                style="background-color: #CED2D5">{{ $notification->status }}</span>
                                                         </h5>
                                                     </div>
                                                     <div class="col-md-4">
                                                         <h5> <span class="p-3 badge"
-                                                                style="background-color: #CED2D5">{{ $notification->status }}</span>
+                                                                style="background-color: #CED2D5">{{ $notification->created_at->format('F j, Y, g:i a') }}</span>
                                                         </h5>
                                                     </div>
+
                                                 </div>
                                             </div>
                                         </div>
