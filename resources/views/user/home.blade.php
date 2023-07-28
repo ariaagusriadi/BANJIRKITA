@@ -109,8 +109,8 @@
                                         </div>
                                         <div class="col-md-3 d-flex justify-content-center align-items-center">
                                             <div class="">
-                                                <img src="{{ url('admin/icons') }}/bahaya.svg" class=""
-                                                    width="250px" alt="">
+                                                <img src="{{ url('admin/icons') }}/bahaya.svg" class="img-fluid"
+                                                    alt="">
                                             </div>
                                         </div>
                                     </div>
@@ -147,8 +147,8 @@
                                         </div>
                                         <div class="col-md-3 d-flex justify-content-center align-items-center">
                                             <div class="">
-                                                <img src="{{ url('admin/icons') }}/siaga.svg" class=""
-                                                    width="250px" alt="">
+                                                <img src="{{ url('admin/icons') }}/siaga.svg" class="img-fluid"
+                                                    alt="">
                                             </div>
                                         </div>
                                     </div>
@@ -184,8 +184,8 @@
                                         </div>
                                         <div class="col-md-3 d-flex justify-content-center align-items-center">
                                             <div class="">
-                                                <img src="{{ url('admin/icons') }}/waspada.svg" class=""
-                                                    width="250px" alt="">
+                                                <img src="{{ url('admin/icons') }}/waspada.svg" class="img-fluid"
+                                                    alt="">
                                             </div>
                                         </div>
                                     </div>
@@ -221,8 +221,8 @@
                                         </div>
                                         <div class="col-md-3 d-flex justify-content-center align-items-center">
                                             <div class="">
-                                                <img src="{{ url('admin/icons') }}/normal.svg" class=""
-                                                    width="250px" alt="">
+                                                <img src="{{ url('admin/icons') }}/normal.svg" class="img-fluid"
+                                                    alt="">
                                             </div>
                                         </div>
                                     </div>
