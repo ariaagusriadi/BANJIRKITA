@@ -76,129 +76,131 @@
                     <div class="card-body">
                         <h4 class="text-center">Peringatan Dini Banjir</h4>
                         <p class="text-center">Peringatan atau notifikasi banjir </p>
-                        @foreach ($notifications as $notification)
-                            @if ($notification->status == 'Bahaya')
-                                <div class="card mb-3">
-                                    <div class="row">
-                                        <div class="col-md-8 d-flex justify-content-center align-items-center">
-                                            <div class="card-body">
-                                                <h4 class="">{{ $notification->title }}</h4>
-                                                <p class="">
-                                                    {{ $notification->description }}
-                                                </p>
-                                                <div class="d-flex">
-                                                    <h5 class=""> <span class="p-3 badge"
-                                                            style="background-color: #EB1C26">{{ $notification->locations->location_name }}</span>
-                                                    </h5>
-                                                    <h5 class="ml-3"> <span class="p-3 badge"
-                                                            style="background-color: #EB1C26">{{ $notification->created_at->format('F j, Y, g:i a') }}</span>
-                                                    </h5>
-                                                    <h5 class="ml-3"> <span class="p-3 badge"
-                                                            style="background-color: #EB1C26">{{ $notification->status }}</span>
-                                                    </h5>
+                        <div class="row">
+                            @foreach ($notifications as $notification)
+                                @if ($notification->status == 'Bahaya')
+                                    <div class="col-md-6 col-lg-4 mb-4">
+                                        <div class="card">
+                                            <div class="row g-0">
+                                                <div class="col-md 6">
+                                                    <div class="card-body">
+                                                        <h4 class="">{{ $notification->title }}</h4>
+                                                        <p class="">
+                                                            {{ $notification->description }}
+                                                        </p>
+                                                        <div class="d-flex">
+                                                            <h5 class=""> <span class="p-3 badge"
+                                                                    style="background-color: #EB1C26">{{ $notification->locations->location_name }}</span>
+                                                            </h5>
+                                                            <h5 class="ml-3"> <span class="p-3 badge"
+                                                                    style="background-color: #EB1C26">{{ $notification->created_at->format('F j, Y, g:i a') }}</span>
+                                                            </h5>
+                                                            <h5 class="ml-3"> <span class="p-3 badge"
+                                                                    style="background-color: #EB1C26">{{ $notification->status }}</span>
+                                                            </h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 d-flex justify-content-center align-items-center">
+                                                    <img src="{{ url('admin/icons') }}/bahaya.svg" class="card-img"
+                                                        alt="">
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-4 d-flex justify-content-center align-items-center">
-                                            <div class="">
-                                                <img src="{{ url('admin/icons') }}/bahaya.svg" class=""
-                                                    width="250px" alt="">
-                                            </div>
-                                        </div>
                                     </div>
-                                </div>
-                            @elseif ($notification->status == 'Siaga')
-                                <div class="card mb-3">
-                                    <div class="row">
-                                        <div class="col-md-8 d-flex justify-content-center align-items-center">
-                                            <div class="card-body">
-                                                <h4 class="">{{ $notification->title }}</h4>
-                                                <p class="">
-                                                    {{ $notification->description }}
-                                                </p>
-                                                <div class="d-flex">
-                                                    <h5 class=""> <span class="p-3 badge"
-                                                            style="background-color: #F69128">{{ $notification->locations->location_name }}</span>
-                                                    </h5>
-                                                    <h5 class="ml-3"> <span class="p-3 badge"
-                                                            style="background-color: #F69128">{{ $notification->created_at->format('F j, Y, g:i a') }}</span>
-                                                    </h5>
-                                                    <h5 class="ml-3"> <span class="p-3 badge"
-                                                            style="background-color: #F69128">{{ $notification->status }}</span>
-                                                    </h5>
+                                @elseif ($notification->status == 'Siaga')
+                                    <div class="col-md-6 col-lg-4 mb-4">
+                                        <div class="card">
+                                            <div class="row g-0">
+                                                <div class="col-md 6">
+                                                    <div class="card-body">
+                                                        <h4 class="">{{ $notification->title }}</h4>
+                                                        <p class="">
+                                                            {{ $notification->description }}
+                                                        </p>
+                                                        <div class="d-flex">
+                                                            <h5 class=""> <span class="p-3 badge"
+                                                                    style="background-color: #F69128">{{ $notification->locations->location_name }}</span>
+                                                            </h5>
+                                                            <h5 class="ml-3"> <span class="p-3 badge"
+                                                                    style="background-color: #F69128">{{ $notification->created_at->format('F j, Y, g:i a') }}</span>
+                                                            </h5>
+                                                            <h5 class="ml-3"> <span class="p-3 badge"
+                                                                    style="background-color: #F69128">{{ $notification->status }}</span>
+                                                            </h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 d-flex justify-content-center align-items-center">
+                                                    <img src="{{ url('admin/icons') }}/siaga.svg" class="card-img"
+                                                        alt="">
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-4 d-flex justify-content-center align-items-center">
-                                            <div class="">
-                                                <img src="{{ url('admin/icons') }}/siaga.svg" class=""
-                                                    width="250px" alt="">
-                                            </div>
-                                        </div>
                                     </div>
-                                </div>
-                            @elseif ($notification->status == 'Waspada')
-                                <div class="card mb-3">
-                                    <div class="row">
-                                        <div class="col-md-8 d-flex justify-content-center align-items-center">
-                                            <div class="card-body">
-                                                <h4 class="">{{ $notification->title }}</h4>
-                                                <p class="">
-                                                    {{ $notification->description }}
-                                                </p>
-                                                <div class="d-flex">
-                                                    <h5 class=""> <span class="p-3 badge"
-                                                            style="background-color: #FFDE13">{{ $notification->locations->location_name }}</span>
-                                                    </h5>
-                                                    <h5 class="ml-3"> <span class="p-3 badge"
-                                                            style="background-color: #FFDE13">{{ $notification->created_at->format('F j, Y, g:i a') }}</span>
-                                                    </h5>
-                                                    <h5 class="ml-3"> <span class="p-3 badge"
-                                                            style="background-color: #FFDE13">{{ $notification->status }}</span>
-                                                    </h5>
+                                @elseif ($notification->status == 'Waspada')
+                                    <div class="col-md-6 col-lg-4 mb-4">
+                                        <div class="card">
+                                            <div class="row g-0">
+                                                <div class="col-md 6">
+                                                    <div class="card-body">
+                                                        <h4 class="">{{ $notification->title }}</h4>
+                                                        <p class="">
+                                                            {{ $notification->description }}
+                                                        </p>
+                                                        <div class="d-flex">
+                                                            <h5 class=""> <span class="p-3 badge"
+                                                                    style="background-color: #FFDE13">{{ $notification->locations->location_name }}</span>
+                                                            </h5>
+                                                            <h5 class="ml-3"> <span class="p-3 badge"
+                                                                    style="background-color: #FFDE13">{{ $notification->created_at->format('F j, Y, g:i a') }}</span>
+                                                            </h5>
+                                                            <h5 class="ml-3"> <span class="p-3 badge"
+                                                                    style="background-color: #FFDE13">{{ $notification->status }}</span>
+                                                            </h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 d-flex justify-content-center align-items-center">
+                                                    <img src="{{ url('admin/icons') }}/waspada.svg" class="card-img"
+                                                        alt="">
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-4 d-flex justify-content-center align-items-center">
-                                            <div class="">
-                                                <img src="{{ url('admin/icons') }}/waspada.svg" class=""
-                                                    width="250px" alt="">
-                                            </div>
-                                        </div>
                                     </div>
-                                </div>
-                            @elseif ($notification->status == 'Normal')
-                                <div class="card mb-3">
-                                    <div class="row">
-                                        <div class="col-md-8 d-flex justify-content-center align-items-center">
-                                            <div class="card-body">
-                                                <h4 class="">{{ $notification->title }}</h4>
-                                                <p class="">
-                                                    {{ $notification->description }}
-                                                </p>
-                                                <div class="d-flex">
-                                                    <h5 class=""> <span class="p-3 badge"
-                                                            style="background-color: #CED2D5">{{ $notification->locations->location_name }}</span>
-                                                    </h5>
-                                                    <h5 class="ml-3"> <span class="p-3 badge"
-                                                            style="background-color: #CED2D5">{{ $notification->created_at->format('F j, Y, g:i a') }}</span>
-                                                    </h5>
-                                                    <h5 class="ml-3"> <span class="p-3 badge"
-                                                            style="background-color: #CED2D5">{{ $notification->status }}</span>
-                                                    </h5>
+                                @elseif ($notification->status == 'Normal')
+                                    <div class="col-md-6 col-lg-4 mb-4">
+                                        <div class="card">
+                                            <div class="row g-0">
+                                                <div class="col-md 6">
+                                                    <div class="card-body">
+                                                        <h4 class="">{{ $notification->title }}</h4>
+                                                        <p class="">
+                                                            {{ $notification->description }}
+                                                        </p>
+                                                        <div class="d-flex">
+                                                            <h5 class=""> <span class="p-3 badge"
+                                                                    style="background-color: #CED2D5">{{ $notification->locations->location_name }}</span>
+                                                            </h5>
+                                                            <h5 class="ml-3"> <span class="p-3 badge"
+                                                                    style="background-color: #CED2D5">{{ $notification->created_at->format('F j, Y, g:i a') }}</span>
+                                                            </h5>
+                                                            <h5 class="ml-3"> <span class="p-3 badge"
+                                                                    style="background-color: #CED2D5">{{ $notification->status }}</span>
+                                                            </h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 d-flex justify-content-center align-items-center">
+                                                    <img src="{{ url('admin/icons') }}/normal.svg" class="card-img"
+                                                        alt="">
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-4 d-flex justify-content-center align-items-center">
-                                            <div class="">
-                                                <img src="{{ url('admin/icons') }}/normal.svg" class=""
-                                                    width="250px" alt="">
-                                            </div>
-                                        </div>
                                     </div>
-                                </div>
-                            @endif
-                        @endforeach
+                                @endif
+                            @endforeach
+                        </div>
                     </div>
                 </div>
             </div>
