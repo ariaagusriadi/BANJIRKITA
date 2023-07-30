@@ -203,9 +203,7 @@
                     type: 'GET',
                     dataType: 'json',
                     success: (data) => {
-                        var time = data.date;
-                        // var waterlevel = data.ketinggian_air;
-                        // var time = data.time;
+                        var time = data.time;
                         var waterlevel = data.ketinggian_air;
                         addData(waterlevel, time);
 

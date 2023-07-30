@@ -203,9 +203,7 @@
                     type: 'GET',
                     dataType: 'json',
                     success: (data) => {
-                        var time = data.date;
-                        // var humidty = data.kelembapan;
-                        // var time = data.time;
+                        var time = data.time;
                         var humidty = data.kelembapan;
                         addData(humidty, time);
 

@@ -203,9 +203,7 @@
                     type: 'GET',
                     dataType: 'json',
                     success: (data) => {
-                        var time = data.date;
-                        // var temperature = data.suhu;
-                        // var time = data.time;
+                        var time = data.time;
                         var temperature = data.suhu;
                         addData(temperature, time);
 
