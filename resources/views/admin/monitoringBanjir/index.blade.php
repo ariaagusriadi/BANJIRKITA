@@ -110,21 +110,19 @@
 
             const data = <?php echo json_encode($waterLevels); ?>
 
+
             const water_level = data.map((item) => {
                 return item.water_level
             })
 
-            const location = data.map((item) => {
-                return item.location
-            })
-
-            const locations = location.slice(-5);
 
             const time = data.map((item) => {
                 return item.time
             })
 
             const latest = <?php echo json_encode($latestData); ?>
+
+
             const timeLate = latest.map((item) => {
                 return item.time
             })
@@ -133,25 +131,23 @@
                 return item.location
             })
 
-            const locations2 = location2.slice(-5);
 
             function addUl() {
-                for (let i = 0; i < 5; i++) {
-                    $('#myUl').prepend(`
+                for (let i = 1; i < 5; i++) {
+                    $('#myUl').append(`
                         <li class="timeline-item d-flex position-relative overflow-hidden">
                             <div class="timeline-time text-dark flex-shrink-0 text-end">${timeLate[i]}</div>
                                 <div class="timeline-badge-wrap d-flex flex-column align-items-center">
                                     <span class="timeline-badge border-2 border border-primary flex-shrink-0 my-8"></span>
                                     <span class="timeline-badge-border d-block flex-shrink-0"></span>
                                 </div>
-                            <div class="timeline-desc fs-3 text-dark mt-n1">${locations2[i]}</div>
+                            <div class="timeline-desc fs-3 text-dark mt-n1">${location2[i]}</div>
                         </li>
                     `)
                 }
             }
 
             addUl()
-            // console.log(locations);
 
             var ctx = document.getElementById("myChart").getContext('2d');
             var chart = new Chart(ctx, {
