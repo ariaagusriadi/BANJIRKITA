@@ -14,7 +14,8 @@ class MonitoringBanjirController extends Controller
     {
         return view('admin.monitoringBanjir.index', [
             'locations' => LocationSensor::all(),
-            'waterLevels' => WaterLevel::latest()->skip(1)->take(9)->get()
+            'waterLevels' => WaterLevel::latest()->skip(1)->take(9)->get(),
+            'latestData' => WaterLevel::latest()->take(9)->get(),
         ]);
     }
 

@@ -124,16 +124,27 @@
                 return item.time
             })
 
+            const latest = <?php echo json_encode($latestData); ?>
+            const timeLate = latest.map((item) => {
+                return item.time
+            })
+
+            const location2 = latest.map((item) => {
+                return item.location
+            })
+
+            const locations2 = location2.slice(-5);
+
             function addUl() {
                 for (let i = 0; i < 5; i++) {
                     $('#myUl').prepend(`
                         <li class="timeline-item d-flex position-relative overflow-hidden">
-                            <div class="timeline-time text-dark flex-shrink-0 text-end">${time[i]}</div>
+                            <div class="timeline-time text-dark flex-shrink-0 text-end">${timeLate[i]}</div>
                                 <div class="timeline-badge-wrap d-flex flex-column align-items-center">
                                     <span class="timeline-badge border-2 border border-primary flex-shrink-0 my-8"></span>
                                     <span class="timeline-badge-border d-block flex-shrink-0"></span>
                                 </div>
-                            <div class="timeline-desc fs-3 text-dark mt-n1">${locations[i]}</div>
+                            <div class="timeline-desc fs-3 text-dark mt-n1">${locations2[i]}</div>
                         </li>
                     `)
                 }
