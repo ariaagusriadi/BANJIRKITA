@@ -69,7 +69,7 @@
         </div>
     </div>
 
-    <div class="container-fluid mb-5" style="background-color: #D0E1F9" id="warning">
+    <div class="container-fluid mb-5" style="background-color: #5D87FF" id="warning">
         <div class="row justify-content-center py-5">
             <div class="col-md-8">
                 <div class="card" style="background-color: rgba(255, 255, 255, 0.5);">
