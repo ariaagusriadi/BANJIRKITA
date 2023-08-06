@@ -58,19 +58,24 @@
         </nav>
     </header>
     <div class="banner">
-        <div class="container" style="padding: 100px 0 100px 0;">
+        <div class="container" style="padding: 100px 0 0 0;">
             <h1 class="font-weight-semibold">Informasi mengenai Banjir</h1>
-            <h6 class="font-weight-normal text-muted pb-3">untuk daerah ketapang dan sekitaranya..</h6>
+            <h6 class="font-weight-normal text-muted">untuk daerah ketapang dan sekitaranya..</h6>
             {{-- <div>
                 <button class="btn btn-opacity-light mr-1">Get started</button>
                 <button class="btn btn-opacity-success ml-1">Learn more</button>
             </div> --}}
             {{-- <img src="{{ url('admin') }}/logo/banjirkita.svg" alt="" class="img-fluid"> --}}
         </div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#0099ff" fill-opacity="1"
+                d="M0,128L48,117.3C96,107,192,85,288,117.3C384,149,480,235,576,250.7C672,267,768,213,864,197.3C960,181,1056,203,1152,192C1248,181,1344,139,1392,117.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+            </path>
+        </svg>
     </div>
 
-    <div class="container-fluid mb-5" style="background-color: #5D87FF" id="warning">
-        <div class="row justify-content-center py-5">
+    <div class="container-fluid" style="background-color: #0099ff" id="warning">
+        <div class="row justify-content-center position-relative">
             <div class="col-md-8">
                 <div class="card" style="background-color: rgba(255, 255, 255, 0.5);">
                     <div class="card-body">
@@ -82,13 +87,13 @@
                                     <div class="row">
                                         <div class="col-md-8 d-flex  align-items-center">
                                             <div class="card-body">
-                                                <h4 >{{ $notification->title }}</h4>
-                                                <p >
+                                                <h4>{{ $notification->title }}</h4>
+                                                <p>
                                                     {{ $notification->description }}
                                                 </p>
                                                 <div class="d-flex row">
                                                     <div class="col-md-3">
-                                                        <h5  class="text-white"> <span class="p-3 badge"
+                                                        <h5 class="text-white"> <span class="p-3 badge"
                                                                 style="background-color: #EB1C26">{{ $notification->locations->location_name }}</span>
                                                         </h5>
                                                     </div>
@@ -108,7 +113,7 @@
                                             </div>
                                         </div>
                                         <div class="col-md-3 d-flex justify-content-center align-items-center">
-                                            <div >
+                                            <div>
                                                 <img src="{{ url('admin/icons') }}/bahaya.svg" width="150px"
                                                     alt="">
                                             </div>
@@ -120,13 +125,13 @@
                                     <div class="row">
                                         <div class="col-md-8 d-flex  align-items-center">
                                             <div class="card-body">
-                                                <h4 >{{ $notification->title }}</h4>
-                                                <p >
+                                                <h4>{{ $notification->title }}</h4>
+                                                <p>
                                                     {{ $notification->description }}
                                                 </p>
                                                 <div class="d-flex row">
                                                     <div class="col-md-3">
-                                                        <h5  class="text-white"> <span class="p-3 badge"
+                                                        <h5 class="text-white"> <span class="p-3 badge"
                                                                 style="background-color: #F69128">{{ $notification->locations->location_name }}</span>
                                                         </h5>
                                                     </div>
@@ -146,7 +151,7 @@
                                             </div>
                                         </div>
                                         <div class="col-md-3 d-flex justify-content-center align-items-center">
-                                            <div >
+                                            <div>
                                                 <img src="{{ url('admin/icons') }}/siaga.svg" width="150px"
                                                     alt="">
                                             </div>
@@ -158,13 +163,13 @@
                                     <div class="row">
                                         <div class="col-md-8 d-flex align-items-center">
                                             <div class="card-body">
-                                                <h4 >{{ $notification->title }}</h4>
-                                                <p >
+                                                <h4>{{ $notification->title }}</h4>
+                                                <p>
                                                     {{ $notification->description }}
                                                 </p>
                                                 <div class="d-flex row">
                                                     <div class="col-md-3">
-                                                        <h5  class="text-white"> <span class="p-3 badge"
+                                                        <h5 class="text-white"> <span class="p-3 badge"
                                                                 style="background-color: #FFDE13">{{ $notification->locations->location_name }}</span>
                                                         </h5>
                                                     </div>
@@ -183,7 +188,7 @@
                                             </div>
                                         </div>
                                         <div class="col-md-3 d-flex justify-content-center align-items-center">
-                                            <div >
+                                            <div>
                                                 <img src="{{ url('admin/icons') }}/waspada.svg" width="150px"
                                                     alt="">
                                             </div>
@@ -195,13 +200,13 @@
                                     <div class="row">
                                         <div class="col-md-8 d-flex  align-items-center">
                                             <div class="card-body">
-                                                <h4 >{{ $notification->title }}</h4>
-                                                <p >
+                                                <h4>{{ $notification->title }}</h4>
+                                                <p>
                                                     {{ $notification->description }}
                                                 </p>
                                                 <div class="d-flex row">
                                                     <div class="col-md-3">
-                                                        <h5  class="text-white"> <span class="p-3 badge"
+                                                        <h5 class="text-white"> <span class="p-3 badge"
                                                                 style="background-color: #CED2D5">{{ $notification->locations->location_name }}</span>
                                                         </h5>
                                                     </div>
@@ -220,7 +225,7 @@
                                             </div>
                                         </div>
                                         <div class="col-md-3 d-flex justify-content-center align-items-center">
-                                            <div >
+                                            <div>
                                                 <img src="{{ url('admin/icons') }}/normal.svg" width="150px"
                                                     alt="">
                                             </div>
@@ -253,7 +258,8 @@
                                         <th>{{ $loop->iteration }}</th>
                                         <td>{{ $waterLevel->location }}</td>
                                         <td>{{ $waterLevel->water_level }} Cm</td>
-                                        <td>{{ $waterLevel->time }}, {{ $waterLevel->created_at->format('F j, Y') }}</td>
+                                        <td>{{ $waterLevel->time }}, {{ $waterLevel->created_at->format('F j, Y') }}
+                                        </td>
                                     </tr>
                                 @endforeach
                             </tbody>
@@ -262,7 +268,13 @@
                 </div>
             </div>
         </div>
+
     </div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#0099ff" fill-opacity="1"
+            d="M0,160L48,170.7C96,181,192,203,288,192C384,181,480,139,576,144C672,149,768,203,864,224C960,245,1056,235,1152,208C1248,181,1344,139,1392,117.3L1440,96L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z">
+        </path>
+    </svg>
 
     <div class="container" id="weather">
         <section class="case-studies" id="case-studies-section">
@@ -277,13 +289,13 @@
                 <div class="owl-carousel owl-theme grid-margin">
                     @foreach ($all_weather as $weather)
                         @if (strtotime($weather['jamCuaca']) > $time)
-                            <div class="card customer-cards mx-2" style="background-color:rgb(208,225,249) ">
+                            <div class="card customer-cards mx-2" style="background-color:#0099ff ">
                                 <div class="card-body">
                                     <div class="text-center">
                                         <img src="https://ibnux.github.io/BMKG-importer/icon/{{ $weather['kodeCuaca'] }}.png"
                                             width="89" height="89" alt="" class="img-customer">
-                                        <h6 class="card-title pt-3">{{ $weather['jamCuaca'] }}</h6>
-                                        <table class="table">
+                                        <h6 class="card-title pt-3 text-white">{{ $weather['jamCuaca'] }}</h6>
+                                        <table class="table text-white">
                                             <tbody>
                                                 <tr>
                                                     <td> {{ $weather['humidity'] }}% Humidity</td>
