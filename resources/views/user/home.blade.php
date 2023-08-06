@@ -277,7 +277,7 @@
                 <div class="owl-carousel owl-theme grid-margin">
                     @foreach ($all_weather as $weather)
                         @if (strtotime($weather['jamCuaca']) > $time)
-                            <div class="card customer-cards mx-2" style="background-color:#5D87FF ">
+                            <div class="card customer-cards mx-2" style="background-color:rgb(208,225,249) ">
                                 <div class="card-body">
                                     <div class="text-center">
                                         <img src="https://ibnux.github.io/BMKG-importer/icon/{{ $weather['kodeCuaca'] }}.png"
