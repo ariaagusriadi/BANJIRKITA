@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\auth\LoginController;
 use App\Http\Controllers\Api\FetchDataController;
 use App\Http\Controllers\admin\MonitoringBanjirController;
+use App\Http\Controllers\user\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,13 +17,13 @@ use App\Http\Controllers\admin\MonitoringBanjirController;
 |
 */
 
-Route::get('/', fn () => redirect('/login'));
+Route::get('/', [HomeController::class, 'index']);
+
 
 Route::get('/login', [LoginController::class, 'loginView'])->name('login');
 Route::post('/login', [LoginController::class, 'loginProcess']);
 Route::get('/logout', [LoginController::class, 'logOut']);
 
-include "_/user/home.php";
 Route::get('monitoring-banjir/total', [MonitoringBanjirController::class, 'monitor']);
 Route::get('/monitoring/fetchData', [MonitoringBanjirController::class, 'monitorFetchData']);
 
@@ -39,7 +40,3 @@ Route::middleware('auth')->prefix('admin')->group(function () {
     include "_/admin/FetchDataController.php";
     include "_/admin/user.php";
 });
-
-// Route::get('/', function () {
-//     return view('welcome');
-// });
