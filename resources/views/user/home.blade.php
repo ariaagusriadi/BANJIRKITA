@@ -92,7 +92,7 @@
                                         Kami sampaikan bahwa daerah berikut ini sedang mengalami banjir darurat:
                                     </p>
 
-                                    <ul class="list-unstyled">
+                                    <ul>
                                         <li> Daerah Terdampak: <b> {{ $notification->affected_area }} </b></li>
                                         <li> Status Banjir: <b> {{ $notification->status }} </b></li>
                                         <li> Waktu Terdeteksi: <b>
