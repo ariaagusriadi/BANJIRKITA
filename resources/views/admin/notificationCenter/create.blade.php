@@ -16,7 +16,8 @@
                                     <input type="text" name="title"
                                         class="form-control @error('title')
                                        is-invalid
-                                    @enderror" placeholder="Pemberitahuan Banjir Darurat">
+                                    @enderror"
+                                        placeholder="Pemberitahuan Banjir Darurat">
                                     @error('title')
                                         <div class="invalid-feedback">{{ $message }}</div>
                                     @enderror
@@ -182,12 +183,13 @@
                 tabsize: 2,
                 height: 150,
                 toolbar: [
-                    ['style', ['style']],
-                    ['font', ['bold', 'underline', 'clear']],
+                    // [groupName, [list of button]]
+                    ['style', ['bold', 'italic', 'underline', 'clear']],
+                    ['font', ['strikethrough', 'superscript', 'subscript']],
+                    ['fontsize', ['fontsize']],
                     ['color', ['color']],
                     ['para', ['ul', 'ol', 'paragraph']],
-                    ['table', ['table']],
-                    ['view', ['fullscreen', 'codeview', 'help']]
+                    ['height', ['height']]
                 ]
             });
             $('#location').on('change', function() {
