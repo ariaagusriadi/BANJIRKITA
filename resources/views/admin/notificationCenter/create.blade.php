@@ -188,7 +188,7 @@
                     ['font', ['strikethrough', 'superscript', 'subscript']],
                     ['fontsize', ['fontsize']],
                     ['color', ['color']],
-                    ['para', ['paragraph']],
+                    ['para', ['ul', 'ol', 'paragraph']],
                     ['height', ['height']]
                 ]
             });
