@@ -82,7 +82,47 @@
                         <h4 class="text-center">Peringatan Dini Banjir</h4>
                         <p class="text-center">Peringatan atau notifikasi banjir </p>
                         @foreach ($notifications as $notification)
-                            @if ($notification->status == 'Bahaya')
+                            <div class="card px-5 py-4 mb-3">
+                                <div class="card body">
+                                    <h4>{{ $notification->title }}</h4>
+
+                                    <p class="mt-2">Kepada Warga Terhormat di Wilayah <b>
+                                            {{ $notification->locations->location_name }} </b>,
+                                        <br />
+                                        Kami sampaikan bahwa daerah berikut ini sedang mengalami banjir darurat:
+                                    </p>
+
+                                    <ul>
+                                        <li> Daerah Terdampak: <b> {{ $notification->affected_area }} </b></li>
+                                        <li> Status Banjir: <b> {{ $notification->status }} </b></li>
+                                        <li> Waktu Terdeteksi: <b>
+                                                {{ $notification->created_at->format('F j, Y, g:i a') }} </b>
+                                        </li>
+                                    </ul>
+
+                                    <p>
+                                        Kami mohon agar Anda segera mengambil langkah-langkah berikut: <br />
+
+                                        {!! $notification->description !!}
+
+                                        Terima kasih
+                                    </p>
+
+
+                                </div>
+                                @if ($notification->status == 'Bahaya')
+                                    <div class="card-footer" style="background-color: #eb1c26"></div>
+                                @elseif ($notification->status == 'Siaga')
+                                    <div class="card-footer" style="background-color: #f69128"></div>
+                                @elseif ($notification->status == 'Waspada')
+                                    <div class="card-footer" style="background-color: #ffde13"></div>
+                                @elseif ($notification->status == 'Normal')
+                                    <div class="card-footer" style="background-color: #ced2d5"></div>
+                                @endif
+
+                            </div>
+
+                            {{-- @if ($notification->status == 'Bahaya')
                                 <div class="card mb-3">
                                     <div class="row">
                                         <div class="col-md-8 d-flex  align-items-center">
@@ -239,7 +279,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            @endif
+                            @endif --}}
                         @endforeach
                     </div>
                 </div>

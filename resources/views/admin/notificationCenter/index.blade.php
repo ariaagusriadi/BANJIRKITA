@@ -36,7 +36,7 @@
                                 <div class="card mb-2">
                                     <div class="card-body">
                                         <h5 class="fw-semibold fs-5 mb-3">{{ $notification_publish->title }}</h5>
-                                        <p> {{ $notification_publish->description }}</p>
+                                        <p> {!! $notification_publish->description !!}</p>
                                         @if ($notification_publish->status == 'Bahaya')
                                             <span class="mb-1 badge"
                                                 style="background-color:rgb(235,28,38)">{{ $notification_publish->status }}</span>
@@ -69,7 +69,7 @@
                                 <div class="card mb-2">
                                     <div class="card-body">
                                         <h5 class="fw-semibold fs-5 mb-3">{{ $notification_log->title }}</h5>
-                                        <p> {{ $notification_log->description }}</p>
+                                        <p> {!! $notification_log->description !!}</p>
                                         @if ($notification_log->status == 'Bahaya')
                                             <span class="mb-1 badge"
                                                 style="background-color:rgb(235,28,38)">{{ $notification_log->status }}</span>

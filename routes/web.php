@@ -17,6 +17,8 @@ use App\Http\Controllers\user\HomeController;
 |
 */
 
+Route::get('/send-tele', [FetchDataController::class, 'pushTele']);
+
 Route::get('/', [HomeController::class, 'index']);
 
 
