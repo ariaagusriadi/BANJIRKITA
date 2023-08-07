@@ -51,7 +51,8 @@
                                                 style="background-color:rgb(206,210,213);">{{ $notification_publish->status }}</span>
                                         @endif
                                         &nbsp {{ $notification_publish->locations->location_name }} &nbsp
-                                        {{ $notification_publish->created_at->format('F j, Y, g:i a') }}
+                                        {{ $notification_publish->created_at->format('F j, Y, g:i a') }} &nbsp
+                                        {{  $notification_publish->affected_area}}
 
                                         <form action="{{ url('admin/notification-center/unPublished', $notification_publish->id) }}" method="post">
                                             @csrf

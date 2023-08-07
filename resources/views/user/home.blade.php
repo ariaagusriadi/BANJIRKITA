@@ -88,6 +88,8 @@
                                         <div class="col-md-8 d-flex  align-items-center">
                                             <div class="card-body">
                                                 <h4>{{ $notification->title }}</h4>
+                                                <h6> {{ $notification->affected_area }}</h6>
+
                                                 <p>
                                                     {{ $notification->description }}
                                                 </p>
@@ -126,6 +128,8 @@
                                         <div class="col-md-8 d-flex  align-items-center">
                                             <div class="card-body">
                                                 <h4>{{ $notification->title }}</h4>
+                                                <h6> {{ $notification->affected_area }}</h6>
+
                                                 <p>
                                                     {{ $notification->description }}
                                                 </p>
@@ -164,6 +168,8 @@
                                         <div class="col-md-8 d-flex align-items-center">
                                             <div class="card-body">
                                                 <h4>{{ $notification->title }}</h4>
+                                                <h6> {{ $notification->affected_area }}</h6>
+
                                                 <p>
                                                     {{ $notification->description }}
                                                 </p>
@@ -201,6 +207,7 @@
                                         <div class="col-md-8 d-flex  align-items-center">
                                             <div class="card-body">
                                                 <h4>{{ $notification->title }}</h4>
+                                                <h6> {{ $notification->affected_area }}</h6>
                                                 <p>
                                                     {{ $notification->description }}
                                                 </p>

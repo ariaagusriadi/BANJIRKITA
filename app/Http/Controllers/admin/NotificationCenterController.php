@@ -31,6 +31,7 @@ class NotificationCenterController extends Controller
             "location" => 'required',
             "status" => 'required',
             "description" => 'required',
+            "affected_area" => 'required',
         ]);
 
         $notification = new Notification();
@@ -38,6 +39,7 @@ class NotificationCenterController extends Controller
         $notification->location = $request->location;
         $notification->status = $request->status;
         $notification->description = $request->description;
+        $notification->affected_area = $request->affected_area;
         $notification->log = "Publish";
         $notification->save();
 

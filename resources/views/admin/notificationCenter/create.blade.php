@@ -23,6 +23,7 @@
                                         <div class="invalid-feedback">{{ $message }}</div>
                                     @enderror
                                 </div>
+
                                 <div class="form-group mb-3">
                                     <label for="" class="form-label">Location</label>
                                     <select id="location" name="location"
@@ -36,6 +37,18 @@
                                         @endforeach
                                     </select>
                                 </div>
+
+                                <div class="form-group mb-3">
+                                    <label for="" class="form-label">Affected Area</label>
+                                    <input type="text" name="affected_area"
+                                        class="form-control @error('affected_area')
+                                       is-invalid
+                                    @enderror">
+                                    @error('affected_area')
+                                        <div class="invalid-feedback">{{ $message }}</div>
+                                    @enderror
+                                </div>
+
                                 <div class="form-group mb-3">
                                     <label for="" class="form-label">Status</label>
                                     <select name="status"
