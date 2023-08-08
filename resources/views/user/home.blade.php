@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="{{ url('user') }}/vendors/aos/css/aos.css">
     <link rel="stylesheet" href="{{ url('user') }}/css/style.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.5/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/fixedheader/3.3.2/css/fixedHeader.bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.4.1/css/responsive.bootstrap.min.css">
 </head>
 
 <body id="body" data-spy="scroll" data-target=".navbar" data-offset="100">
@@ -291,7 +293,7 @@
                     <div class="card-body">
                         <h4 class="text-center">Pemantauan Tinggi Air</h4>
                         <p class="text-center">Data di ambil dalam waktu 24 jam terakhir</p>
-                        <table class="table table-bordered" id="tinggi">
+                        <table class="table table-bordered responsive" id="tinggi">
                             <thead>
                                 <tr>
                                     <th scope="col">No</th>
@@ -406,11 +408,17 @@
     <script src="{{ url('user') }}/vendors/aos/js/aos.js"></script>
     <script src="{{ url('user') }}/js/landingpage.js"></script>
     <script src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.4.1/js/responsive.bootstrap.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.4.1/js/dataTables.responsive.min.js"></script>
+    <script src="https://cdn.datatables.net/fixedheader/3.3.2/js/dataTables.fixedHeader.min.js"></script>
     <script>
         $(document).ready(function() {
-            $('#tinggi').DataTable({
+            var table = $('#tinggi').DataTable({
                 responsive: true
             });
+
+
+            new $.fn.dataTable.FixedHeader(table);
         });
     </script>
 </body>
