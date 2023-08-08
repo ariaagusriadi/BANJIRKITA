@@ -79,13 +79,13 @@
     <div class="container-fluid" style="background-color: #0099ff" id="warning">
         <div class="row justify-content-center position-relative">
             <div class="col-md-8">
-                <div class="card" style="background-color: rgba(255, 255, 255, 0.5);">
-                    <div class="card-body">
+                <div class="" style="background-color: rgba(255, 255, 255, 0.5); padding: 20px 20px 20px 20px; border-radius: 10px">
+                    {{-- <div class="card-body"> --}}
                         <h4 class="text-center">Peringatan Dini Banjir</h4>
                         <p class="text-center">Peringatan atau notifikasi banjir </p>
                         @foreach ($notifications as $notification)
-                            <div class="card px-5 py-4 mb-3">
-                                <div class="card body">
+                            <div class="card px-3 py-3 mb-3">
+                                <div class="card body p-3">
                                     <h4>{{ $notification->title }}</h4>
 
                                     <p class="mt-2">Kepada Warga Terhormat di Wilayah <b>
@@ -123,7 +123,7 @@
 
                             </div>
                         @endforeach
-                    </div>
+                    {{-- </div> --}}
                 </div>
 
 
