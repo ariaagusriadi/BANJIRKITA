@@ -7,7 +7,7 @@
                 <div class="col-md-8">
                     <div class="card mb-2">
                         <div class="card-body">
-                            <h5 class="fw-semibold fs-5 mb-4 text-center">Peringatan Dini Banjir</h5>
+                            <h5 class="fw-semibold fs-5 mb-4 text-center">Peringatan Dini Banjir By Telegram</h5>
 
                             <form action="{{ url('admin/notification-center') }}" method="post">
                                 @csrf
@@ -17,7 +17,7 @@
                                         class="form-control @error('title')
                                        is-invalid
                                     @enderror"
-                                        placeholder="Pemberitahuan Banjir Darurat">
+                                        value="Pemberitahuan Banjir Darurat">
                                     @error('title')
                                         <div class="invalid-feedback">{{ $message }}</div>
                                     @enderror
@@ -39,7 +39,7 @@
 
                                 <div class="form-group mb-3">
                                     <label for="" class="form-label">Affected Area</label>
-                                    <input type="text" name="affected_area"
+                                    <input type="text" id="affected_area" name="affected_area"
                                         class="form-control @error('affected_area')
                                        is-invalid
                                     @enderror">
@@ -67,7 +67,9 @@
                                     <textarea name="description" id="desc" cols="30" rows="18"
                                         class="form-control @error('description')
                                         is-invalid
-                                     @enderror"></textarea>
+                                     @enderror">
+                                     <ol><li>&nbsp;Pindahkan diri ke tempat yang lebih tinggi dan aman.</li><li>Bawa persediaan darurat dan perlengkapan penting.</li><li>&nbsp;Tidak melewati jalanan yang tergenang air.</li><li>&nbsp;Ikuti arahan dari pihak berwenang.</li><li>Kami akan terus memberikan informasi terbaru. Tetap tenang dan waspada.<br></li></ol>
+                                    </textarea>
                                     @error('description')
                                         <div class="invalid-feedback">{{ $message }}</div>
                                     @enderror
@@ -197,8 +199,6 @@
                     type: "GET",
                     dataType: "json",
                     success: function(data) {
-
-
                         $('#bahaya_1').val(data.bahaya_1 + " Cm")
                         $('#bahaya_2').val(data.bahaya_2 + " Cm")
                         $('#siaga_1').val(data.siaga_1 + " Cm")
@@ -207,10 +207,10 @@
                         $('#waspada_2').val(data.waspada_2 + " Cm")
                         $('#normal_1').val(data.normal_1 + " Cm")
                         $('#normal_2').val(data.normal_2 + " Cm")
+                        $('#affected_area').val('kampung tengah, kauman, sukabaru')
                     }
                 })
             })
-
 
             function fetchData() {
                 $.ajax({

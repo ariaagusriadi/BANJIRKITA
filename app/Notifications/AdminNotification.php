@@ -17,12 +17,14 @@ class AdminNotification extends Notification
 
     public function toTelegram($notifiable)
     {
-        $url = url('http://banjirkita.codewrite.my.id/login');
+        $url = url('http://banjirkita.codewrite.my.id/admin/notification-center/create-telegram');
+        $url2 = url('http://banjirkita.codewrite.my.id/admin/notification-center/create');
 
         return TelegramMessage::create()
             ->to('1265365501')
             ->content("Location {$notifiable->location}, Terindikasi banjir dengan ketinggian air {$notifiable->water_level} Cm, dengan waktu {$notifiable->time} ")
             ->line(" admin di harapkan memastikan ketinnggian air dan membuat notifikasi untuk masyarakat")
-            ->button('Login Banjir kita', $url);
+            ->button('Buat Notifikasi Instan', $url)
+            ->button('Buat Notifikasi Manual', $url2);
     }
 }

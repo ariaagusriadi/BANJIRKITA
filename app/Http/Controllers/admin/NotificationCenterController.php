@@ -57,4 +57,11 @@ class NotificationCenterController extends Controller
         $notification_log->delete();
         return back()->with('danger', 'success delete notification');
     }
+
+    public function createTelegram()
+    {
+        return view('admin.notificationCenter.create-telegram', [
+            'locations' => LocationSensor::all()
+        ]);
+    }
 }

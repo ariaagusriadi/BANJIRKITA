@@ -8,3 +8,6 @@ Route::get('notification-center/create', [NotificationCenterController::class, '
 Route::post('notification-center', [NotificationCenterController::class, 'store']);
 Route::put('notification-center/unPublished/{notification}', [NotificationCenterController::class, 'update']);
 Route::delete('notification-center/delete/{notification_log}', [NotificationCenterController::class, 'destroy']);
+
+
+Route::get('notification-center/create-telegram', [NotificationCenterController::class, 'createTelegram']);

@@ -108,7 +108,6 @@
                                         Terima kasih
                                     </p>
 
-
                                 </div>
                                 @if ($notification->status == 'Bahaya')
                                     <div class="card-footer" style="background-color: #eb1c26"></div>
@@ -121,8 +120,14 @@
                                 @endif
 
                             </div>
+                        @endforeach
+                    </div>
+                </div>
 
-                            {{-- @if ($notification->status == 'Bahaya')
+
+            </div>
+
+            {{-- @if ($notification->status == 'Bahaya')
                                 <div class="card mb-3">
                                     <div class="row">
                                         <div class="col-md-8 d-flex  align-items-center">
@@ -280,10 +285,6 @@
                                     </div>
                                 </div>
                             @endif --}}
-                        @endforeach
-                    </div>
-                </div>
-            </div>
 
             <div class="col-md-8 mt-5">
                 <div class="card">
@@ -407,7 +408,9 @@
     <script src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.min.js"></script>
     <script>
         $(document).ready(function() {
-            $('#tinggi').DataTable();
+            $('#tinggi').DataTable({
+                responsive: true
+            });
         });
     </script>
 </body>
