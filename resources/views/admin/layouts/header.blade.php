@@ -15,10 +15,8 @@
         </ul>
 
         <div class="d-block d-lg-none">
-            <img src="https://demos.adminmart.com/premium/bootstrap/modernize-bootstrap/package/dist/images/logos/dark-logo.svg"
-                class="dark-logo" width="180" alt="" />
-            <img src="https://demos.adminmart.com/premium/bootstrap/modernize-bootstrap/package/dist/images/logos/light-logo.svg"
-                class="light-logo" width="180" alt="" />
+            <img src="{{ url('admin') }}/logo/banjirkita.png" class="dark-logo" width="180" alt="" />
+            <img src="{{ url('admin') }}/logo/banjirkita.png" class="light-logo" width="180" alt="" />
         </div>
         <button class="navbar-toggler p-0 border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,8 +38,8 @@
                             aria-expanded="false">
                             <div class="d-flex align-items-center">
                                 <div class="user-profile-img">
-                                    <img src="{{ url('admin') }}/dist/images/profile/user-1.jpg"
-                                        class="rounded-circle" width="35" height="35" alt="" />
+                                    <img src="{{ url('admin') }}/dist/images/profile/user-1.jpg" class="rounded-circle"
+                                        width="35" height="35" alt="" />
                                 </div>
                             </div>
                         </a>
@@ -52,8 +50,8 @@
                                     <h5 class="mb-0 fs-5 fw-semibold">User Profile</h5>
                                 </div>
                                 <div class="d-flex align-items-center py-9 mx-7 border-bottom">
-                                    <img src="{{ url('admin') }}/dist/images/profile/user-1.jpg"
-                                        class="rounded-circle" width="80" height="80" alt="" />
+                                    <img src="{{ url('admin') }}/dist/images/profile/user-1.jpg" class="rounded-circle"
+                                        width="80" height="80" alt="" />
                                     <div class="ms-3">
                                         <h5 class="mb-1 fs-3">{{ auth()->user()->username }}</h5>
                                         <p class="mb-0 d-flex text-dark align-items-center gap-2">

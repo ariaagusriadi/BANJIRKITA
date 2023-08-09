@@ -58,7 +58,7 @@
         aria-labelledby="offcanvasWithBothOptionsLabel">
         <nav class="sidebar-nav scroll-sidebar">
             <div class="offcanvas-header justify-content-between">
-                <img src="{{ url('admin') }}/dist/images/logos/favicon.png" alt="" class="img-fluid">
+                <img src="{{ url('admin') }}/logo/banjirkita.png" alt="" class="img-fluid">
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div class="offcanvas-body profile-dropdown mobile-navbar" data-simplebar="" data-simplebar>
